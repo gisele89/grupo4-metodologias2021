@@ -1,10 +1,11 @@
-## Introducción a las Metodologías de Desarrollo de Software | 2021
+# Introducción a las Metodologías de Desarrollo de Software | 2021
 
 ___________
 ## TPE - Cooperativa de Reciclaje
 
 ### Grupo 4 | Bartolo Gisele - Cristiano Giancarlo - Gonzalez Lucas  - Dimasi Leonel -  Lucero Lucrecia - Valenzuela Betania
 
+___________
 ### Estado de product backlog  
 
 #### Lista de requerimientos para desarrollar el producto
@@ -24,7 +25,7 @@ ___________
 
 > Figma: https://www.figma.com/file/O4sQKumExGTjBSnL1ru1TZ/Grupo-4-TPE-Metodolog%C3%ADas-2021-team-library?node-id=0%3A1
 
-> Presentacion: https://docs.google.com/presentation/d/1mV-RXv__TuqKn8lEdzT4DtjeKpVQ-hbhK78xfiYiPY0/edit#slide=id.g7b0b05153e_1_387
+> Warm up - presentacion: https://docs.google.com/presentation/d/1mV-RXv__TuqKn8lEdzT4DtjeKpVQ-hbhK78xfiYiPY0/edit#slide=id.g7b0b05153e_1_387
 
 
 
