@@ -22,7 +22,7 @@
             <div class="container">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href=''> <img src="./media/CRUT-1.png"/ height="72px"></a>
+                        <a class="home-logo" href='index.html'> <img src="./media/CRUT-1.png"/ height="72px"></a>
                     </li>
                 </ul>
                 
@@ -50,57 +50,32 @@
     </header>
 
     <!-- **************************** Body Main **************************** -->
-    <main class="flex-shrink-0">
-        <div class="container main-container">
-            <form class="col-lg-4 m-auto">
-                <h1 class="color-green">
-                    Postulate
-                </h1>
-                <p class="text-secondary">
-                    Doná los materiales que ya no uses para que nosotros podamos reciclarlos y hacer juntos un mundo mejor.
-                </p>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="nameInput" placeholder="Nombre/s">
+    <main class="flex-shrink-0 mb-5">
+        <img src="./media/imagen-postulate.png" class="image-wide" alt="foto reciclaje">
+        <div class="container-lg text-white">
+            <h1 class="inner-title ">Doná los materiales<br>que ya no uses</h1>
+            <hr class="inner-line">
+            <p class="inner-p">Nosotros podemos reciclarlos y hacer juntos<br>un mundo mejor.</p>
+        </div>
+        <div class="container-lg text-secondary my-5">
+            <h4 class="mbot">Elegí la opción más conveniente para vos</h4>
+            <div class="shadow-lg p-3 mbot bg-body rounded">
+                <div class="d-flex justify-content-between align-items-center">
+                    Completá el formulario para postular tu oferta de transporte
+                    <a href="form-transporte.html" class="btn text-white background-green rounded-pill mr-0 ml-auto">Postulá tu oferta</a>
                 </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="surnameInput" placeholder="Apellido/s">
+            </div>
+            <div class="shadow-lg p-3 mbot bg-body rounded">
+                <div class="d-flex justify-content-between align-items-center">
+                    Completá el formulario para dar aviso y que se retiren tus materiales
+                    <a href="form-materiales.html" class="btn text-white background-green rounded-pill mr-0 ml-auto">Cargá tu pedido</a>
                 </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="phoneInput" placeholder="Teléfono">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="addressInput" placeholder="Dirección">
-                </div>
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Franja horaria" aria-describedby="volumeHelp">
-                        <option selected disabled>Volúmen</option>
-                        <option value="1">Entra en una caja</option>
-                        <option value="2">Entra en el baúl de un auto</option>
-                        <option value="3">Entra en la caja de una camioneta</option>
-                        <option value="4">Es necesario un camión</option>
-                    </select>
-                    <div id="volumeHelp" class="form-text">De materiales a retirar.</div>
-                </div>
-                <div class="mb-4">
-                    <select class="form-select" aria-label="Franja horaria">
-                        <option selected disabled>Franja horaria</option>
-                        <option value="1">9 a 12hs</option>
-                        <option value="2">13 a 17hs</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <input type="file" class="form-control" id="fileInput" accept="image/*" aria-describedby="fileHelp">
-                    <div id="fileHelp" class="form-text">Soporta .gif, .jpeg, .jpg, .pdf y .png</div>
-                </div>
-                <div class="mb-3 nav justify-content-end">
-                    <button type="submit" class="btn text-white background-green rounded-pill">Enviar solicitud</button>
-                </div>
-            </form>
+            </div>
         </div>
     </main>
 
     <!-- **************************** Footer **************************** -->
-    <footer class="footer mt-auto py-3 fixed-bottom background-green">
+    <footer class="footer mt-auto fixed-bottom background-green">
         <nav class="navbar sticky-bottom navbar-expand-lg navbar-dark">
             <div class="container">
                 <ul class="navbar-nav mr-auto">
