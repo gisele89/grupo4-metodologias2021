@@ -2,6 +2,86 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-a:hover {
-    color: #95C844;
+a.nav-link:hover {
+    border-bottom: 3px solid #5D8026;
+}
+
+.home-logo:hover {
+    filter: brightness(1.5);
+}
+
+button:hover, a.btn:hover {
+    border: 1px solid #5D8026 !important;
+    background-color: white;
+    color: #5D8026 !important;
+}
+
+
+.main-container {
+    display: flex !important;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    z-index: -5;
+}
+
+.mbot {
+    margin-bottom: 2.5rem !important;
+}
+
+.inner-title{
+    position: absolute;
+    font-size: 3.8vw;
+    top: 30%
+}
+
+.inner-line{
+    position: absolute;
+    background-color: white;
+    width: 11vw;
+    height: 2.5px !important;
+    opacity: 1;
+    top: 48%;
+}
+
+.inner-p{
+    position: absolute;
+    font-size: 1.5vw;
+    top: 52%;
+}
+
+.nav-link {
+    margin: 0 1.5em;
+}
+
+.selected-menu {
+    border: 2px solid #5D8026 !important;
+    padding: 0.5em 2em;
+    border-radius: 25px;
+}
+
+.image-wide {
+    position: relative;
+    width: 100%;
+    filter: brightness(0.6) contrast(0.7);
+    z-index: -5;
+}
+
+
+.background-green {
+    background-color: #5D8026;
+}
+
+.color-green {
+    color: #5D8026 !important;
+}
+
+.border-bottom-green-thick {
+    border-bottom: 7.5px solid #5D8026;
+}
+
+.border-bottom-green-thin {
+    border-bottom: 3px solid #5D8026;
 }
