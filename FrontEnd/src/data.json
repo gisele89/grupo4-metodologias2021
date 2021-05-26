@@ -1,0 +1,61 @@
+ {"materiales": [
+    {
+        "img": "/media/botellas-plastico.svg",
+        "nombre": "Botella plástica",
+        "descripcion":"Siempre aplastadas, sin etiquetas y sin restos líquidos."
+    },
+    {
+        "img": "/media/botella-vidrio.svg",
+        "nombre": "Botella de vidrio",
+        "descripcion":"Sin líquido en su interior, enjuagadas y escurridas."
+    },
+    {
+        "img": "/media/bolsa-de-plastico.svg",
+        "nombre": "Bolsa plástica",
+        "descripcion":" Verificar que estén limpias y secas."
+        
+    },
+    {
+        "img": "/media/comunicaciones.svg",
+        "nombre": "Revistas",
+        "descripcion":"Apilar y que estén estiradas cada una de las hojas."
+    },
+    {
+        "img": "/media/periodico.svg",
+        "nombre": "Diarios",
+        "descripcion": "No mezclar con otros tipos de papel.  Apilados y estirados."
+    },
+    {
+        "img": "/media/pintura-en-aerosol.svg",
+        "nombre": "Aerosoles",
+        "descripcion":"Entregar preferentemente vacíos. Llenos o parcialmente vacíos consultar."
+    },
+    {
+        "img": "/media/bolsa-de-la-compra.svg",
+        "nombre": "Bolsa de papel",
+        "descripcion":"Sin manchas de comida, aceite , restos de adhesivos y pegamentos no solubles al agua."
+    },
+    {
+        "img": "/media/instant-coffee.svg",
+        "nombre" : "Tetrapack",
+        "descripcion": "Desdoblar y aplastar. Sin restos líquidos. Quitar tapas plásticas."
+    },
+    {
+        "img": "/media/soda.svg",
+        "nombre": "Latas",
+        "descripcion":"Siempre aplastadas y sin restos líquidos. Enjuagadas."
+    },
+    {
+        "img": "/media/mantequilla-de-mani.svg",
+        "nombre": "Frascos",
+        "descripcion":"Sin líquidos ni comida. Quitar tapas. Enjuagados."
+    },
+    {
+        "img": "/media/lata.svg",
+        "nombre": "Conservas",
+        "descripcion": "Sin restos de comida. Avisar sobre posibles bordes filosos."
+    }
+
+]
+
+ }
