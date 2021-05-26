@@ -1,12 +1,26 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}
+  /* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-a:hover {
+a.nav-link:hover {
     border-bottom: 3px solid #5D8026;
 }
 
-button:hover {
+.home-logo:hover {
+    filter: brightness(1.5);
+}
+
+button:hover, a.btn:hover {
     border: 1px solid #5D8026 !important;
     background-color: white;
     color: #5D8026 !important;
@@ -23,6 +37,39 @@ button:hover {
     z-index: -5;
 }
 
+.mbot {
+    margin-bottom: 2.5rem !important;
+}
+
+.mbot-big {
+    margin-bottom: 6rem !important;
+}
+
+.mtop-big {
+    margin-top: 6rem !important;
+}
+
+.inner-title{
+    position: absolute;
+    font-size: 3.8vw;
+    top: 30%
+}
+
+.inner-line{
+    position: absolute;
+    background-color: white;
+    width: 11vw;
+    height: 2.5px !important;
+    opacity: 1;
+    top: 48%;
+}
+
+.inner-p{
+    position: absolute;
+    font-size: 1.5vw;
+    top: 52%;
+}
+
 .nav-link {
     margin: 0 1.5em;
 }
@@ -32,6 +79,14 @@ button:hover {
     padding: 0.5em 2em;
     border-radius: 25px;
 }
+
+.image-wide {
+    position: relative;
+    width: 100%;
+    filter: brightness(0.6) contrast(0.7);
+    z-index: -5;
+}
+
 
 .background-green {
     background-color: #5D8026;
