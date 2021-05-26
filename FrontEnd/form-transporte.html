@@ -51,7 +51,7 @@
 
     <!-- **************************** Body Main **************************** -->
     <main class="flex-shrink-0">
-        <div class="container main-container mtop-big">
+        <div class="container main-container mt-5">
             <form class="col-lg-4 m-auto">
                 <h1 class="color-green mb-3 mt-4">
                     Postulate
@@ -68,15 +68,15 @@
                 <div class="mb-3">
                     <input type="text" class="form-control form-control-sm" id="addressInput" placeholder="Dirección">
                 </div>
-                <div class="mb-2">
+                <div class="mb-3">
                     <select class="form-select form-select-sm" aria-label="Franja horaria" aria-describedby="volumeHelp">
-                        <option selected disabled>Volúmen</option>
+                        <option selected disabled>Volúmen de materiales</option>
                         <option value="1">Entra en una caja</option>
                         <option value="2">Entra en el baúl de un auto</option>
                         <option value="3">Entra en la caja de una camioneta</option>
                         <option value="4">Es necesario un camión</option>
                     </select>
-                    <div id="volumeHelp" class="form-text">De materiales a retirar.</div>
+                    <!-- <div id="volumeHelp" class="form-text">De materiales a retirar.</div> -->
                 </div>
                 <div class="mb-3">
                     <select class="form-select form-select-sm" aria-label="Franja horaria">
@@ -86,10 +86,10 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <input type="file" class="form-control form-control-sm" id="fileInput" accept="image/jpeg,image/gif,image/png,application/pdf,image/jpg" aria-describedby="fileHelp">
-                    <div id="fileHelp" class="form-text">Soporta .gif, .jpeg, .jpg, .pdf y .png</div>
+                    <div id="fileHelp" class="form-text ms-2 mb-1">Subi una foto tuya</div>
+                    <input type="file" class="form-control form-control-sm" placeholder="Dirección" id="fileInput" accept="image/*" aria-describedby="fileHelp">
                 </div>
-                <div class="mbot-big nav justify-content-end">
+                <div class="mb-5 nav justify-content-end">
                     <button type="submit" class="btn text-white background-green rounded-pill">Enviar solicitud</button>
                 </div>
             </form>
@@ -104,9 +104,7 @@
                     <li class="nav-item">
                         <a href=''> <img src="./media/CRUT-2.png"/ height="48px"></a>
                     </li>
-                </ul>
-                
-                
+                </ul>              
                 <ul class="navbar-nav">
                     <li class="nav-link active">
                         Cooperativa de Recuperadores Urbanos de Tandil
