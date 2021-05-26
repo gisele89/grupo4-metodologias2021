@@ -2,7 +2,7 @@
 
 const HomeScreen = {
     render:() =>{
-        return`
+        return `
             <h1>Home</h1>
         `
     }

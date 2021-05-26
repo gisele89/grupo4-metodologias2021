@@ -6,7 +6,6 @@ const MaterialList ={
     render:async()=>{
         return `
             <div>
-            <h2>Lista de materiales</h2>
             <div class="content-mats">
                 ${mats.map(mat =>
                     `
