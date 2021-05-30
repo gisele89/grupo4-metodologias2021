@@ -1,31 +1,32 @@
 # Introducción a las Metodologías de Desarrollo de Software | 2021
-
 ___________
-## TPE - Cooperativa de Reciclaje
+## Grupo 4 | TPE - Cooperativa de Reciclaje
 
-### Grupo 4 | Bartolo Gisele - Cristiano Giancarlo - Gonzalez Lucas  - Dimasi Leonel -  Lucero Lucrecia - Valenzuela Betania
-
+#### Bartolo Gisele - Cristiano Giancarlo - Gonzalez Lucas  - Dimasi Leonel -  Lucero Lucrecia - Valenzuela Betania
 ___________
-### Estado de product backlog  
+### Sprint 2 
 
 #### Lista de requerimientos para desarrollar el producto
 
-*  Captura de requerimientos a partir del enunciado: 
-> https://drive.google.com/file/d/10t_U8PAG67HUdaHMH82H9CkdLwiUAl53/view?usp=sharing
-* Detección de Épica y Features, refinadas en user stories:
-*  USM : aplicado en miro 
+*  Obtener listado manual de los pedidos de retiro (De las personas que pidieron recolección)
+*  ABM de materiales aceptados (Secretaria)
+*  Pesaje manual sin consulta de recorrido (reducido)
+_____________________________
+#### Indicaciones y links importantes
 
-> Miro: https://miro.com/app/board/o9J_lHjWQ8o=/
+> Para ejecutar la demo correspondiente al Sprint 2 se debe descargar el repositorio y ejecutar de forma local
 
-* Creación de incidencias en Jira
+> Sprint retrospective https://docs.google.com/document/d/1fKvlNKGTze8IfdYDVL9Ofq0oMd9Wjk9iXu7-SMIWY70/edit 
+
+> Sprint 2 - filmina: https://docs.google.com/presentation/d/1jCYrVL5mLsYzkvmlxOwhe_V_8tK2Eg209XgMV8AkMV8/edit#slide=id.gdc6b2ad0bb_0_36
+
+> Template de testing:  https://docs.google.com/document/d/1pILVJPR-nxHdIo_Z--1zPV48KPHYcE3jW9AUkeVBsqY/edit 
 
 > Jira:  https://grupo4-metodologias2021.atlassian.net/jira/software/projects/GMT/boards/1/backlog?selectedIssue=GMT-25
 
-*  Creación de prototipo en baja para representar cada user story 
-
 > Figma: https://www.figma.com/file/O4sQKumExGTjBSnL1ru1TZ/Grupo-4-TPE-Metodolog%C3%ADas-2021-team-library?node-id=0%3A1
 
-> Warm up - presentacion: https://docs.google.com/presentation/d/1mV-RXv__TuqKn8lEdzT4DtjeKpVQ-hbhK78xfiYiPY0/edit#slide=id.g7b0b05153e_1_387
+
 
 
 
