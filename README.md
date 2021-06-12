@@ -20,6 +20,8 @@ _____________________________
 
 > :heavy_check_mark: Sprint retrospective https://docs.google.com/document/d/1fKvlNKGTze8IfdYDVL9Ofq0oMd9Wjk9iXu7-SMIWY70/edit 
 
+> :heavy_check_mark: Poker Planning - evidencia https://docs.google.com/document/d/1DWYqyvssihY-5PR8Y_Z65lxNACSrXqLGxSv01uAijWQ/edit
+
 > :heavy_check_mark: Sprint 2 - filmina: https://docs.google.com/presentation/d/1jCYrVL5mLsYzkvmlxOwhe_V_8tK2Eg209XgMV8AkMV8/edit#slide=id.gdc6b2ad0bb_0_36
 
 > :heavy_check_mark: Template de testing:  https://docs.google.com/document/d/1pILVJPR-nxHdIo_Z--1zPV48KPHYcE3jW9AUkeVBsqY/edit 
