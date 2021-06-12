@@ -19,9 +19,6 @@ public class MaterialAcopio {
 	@Column(nullable = false)
 	private Double peso;
 	
-	@Column(nullable = false)
-	private Double ultimoPeso;
-
 	public Long getIdMaterialAcopio() {
 		return idMaterialAcopio;
 	}
@@ -38,11 +35,5 @@ public class MaterialAcopio {
 		this.peso = peso;
 	}
 
-	public Double getUltimoPeso() {
-		return ultimoPeso;
-	}
-
-	public void setUltimoPeso(Double ultimoPeso) {
-		this.ultimoPeso = ultimoPeso;
-	}
+	
 }
