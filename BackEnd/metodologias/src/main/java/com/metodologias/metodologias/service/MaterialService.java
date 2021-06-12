@@ -50,4 +50,12 @@ public class MaterialService {
 		throw new MaterialNotFound();
 	}
 
+	public MaterialDTO editMaterial(Long idMaterial, MaterialDTO material) throws MaterialNotFound {
+		Optional<Material> _material = materialRepository.findById(idMaterial);
+		if(_material.isPresent()) {
+			return this.convertToMaterialDTO(materialRepository.save(this.convertToMaterial(material)));
+		}
+		throw new MaterialNotFound();
+	}
+
 }
