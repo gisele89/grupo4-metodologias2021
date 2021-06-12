@@ -20,7 +20,23 @@ public class Pedido {
 	public Long getIdPedido() {
 		return idPedido;
 	}
+	@Column(nullable = false)
+	private Date fecha;
 
+	@Column(nullable = false)
+	private String nombre;
+
+	@Column(nullable = false)
+	private String horario;
+
+	@Column(nullable = false)
+	private String telefono;
+	
+	@Column(nullable = false)
+	private String direccion;
+	
+	@Column(nullable = false)
+	private Double peso;
 	public void setIdPedido(Long idPedido) {
 		this.idPedido = idPedido;
 	}
@@ -49,12 +65,12 @@ public class Pedido {
 		this.horario = horario;
 	}
 
-	public String getTeléfono() {
-		return teléfono;
+	public String getTelefono() {
+		return telefono;
 	}
 
-	public void setTeléfono(String teléfono) {
-		this.teléfono = teléfono;
+	public void setTelefono(String teléfono) {
+		this.telefono = teléfono;
 	}
 
 	public String getDireccion() {
@@ -73,21 +89,5 @@ public class Pedido {
 		this.peso = peso;
 	}
 
-	@Column(nullable = false)
-	private Date fecha;
-
-	@Column(nullable = false)
-	private String nombre;
-
-	@Column(nullable = false)
-	private String horario;
-
-	@Column(nullable = false)
-	private String teléfono;
 	
-	@Column(nullable = false)
-	private String direccion;
-	
-	@Column(nullable = false)
-	private Double peso;
 }

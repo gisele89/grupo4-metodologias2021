@@ -4,6 +4,7 @@ public class PedidoDTO {
 	
 	private Long idPedido;
 	private String fecha;
+	private String nombre;
 	private String horario;
 	private String telefono;
 	private String direccion;
@@ -11,9 +12,19 @@ public class PedidoDTO {
 	
 	
 	
+	
 	public PedidoDTO() {
 	
 	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
 	public Long getIdPedido() {
 		return idPedido;
 	}
