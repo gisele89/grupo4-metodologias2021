@@ -41,4 +41,13 @@ public class MaterialService {
 		return this.convertToMaterialDTO(materialRepository.save(this.convertToMaterial(material)));
 	}
 
+	public MaterialDTO deleteMaterial(Long idMaterial) throws MaterialNotFound {
+		Optional<Material> material = materialRepository.findById(idMaterial);
+		if(material.isPresent()) {
+			materialRepository.deleteById(idMaterial);
+			return this.convertToMaterialDTO(material.get());
+		}
+		throw new MaterialNotFound();
+	}
+
 }
