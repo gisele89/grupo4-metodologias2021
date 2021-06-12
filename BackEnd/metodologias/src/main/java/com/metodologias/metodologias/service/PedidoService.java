@@ -25,7 +25,21 @@ public class PedidoService {
 		return pedidosOut;
 	}
 	
+	public PedidoDTO insertPedido(PedidoDTO pedido) {
+	//	Optional<Pedido> _pedido = pedidoRepository.findByNombreAndCategoria(material.getNombre(),material.getCategoria());
+	//	if (_pedido.isPresent()) 
+			
+		return this.convertToPedidoDTO(pedidoRepository.save(this.convertToPedido(pedido)));
+	}
+	
+	
 	public PedidoDTO convertToPedidoDTO(final Pedido pedido) {
 		return Mhelper.modelMapper().map(pedido, PedidoDTO.class);
 	}
+
+	public Pedido convertToPedido(final PedidoDTO pedido) {
+		return Mhelper.modelMapper().map(pedido, Pedido.class);
+	}
+
+	
 }
