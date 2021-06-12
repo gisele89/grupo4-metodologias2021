@@ -31,9 +31,9 @@ public class RegistroMaterialesAcopioController {
 			@ApiResponse(code = 200, message = "Ok"),
 			@ApiResponse(code = 500, message = "Internal Server Error")
 	})
-	public @ResponseBody ResponseEntity<MaterialAcopioDTO> insertPedido(@RequestBody MaterialAcopioDTO pedido ){
+	public @ResponseBody ResponseEntity<MaterialAcopioDTO> insertMaterialAcopio(@RequestBody MaterialAcopioDTO materialAcopio ){
 		try {	
-			return new ResponseEntity<MaterialAcopioDTO>(materialAcopioService.insertMaterialAcopio(pedido),HttpStatus.OK);
+			return new ResponseEntity<MaterialAcopioDTO>(materialAcopioService.insertMaterialAcopio(materialAcopio),HttpStatus.OK);
 		}catch(Exception e) {
 			LOGGER.error(INTERNAL_SERVER_ERROR,e);
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
