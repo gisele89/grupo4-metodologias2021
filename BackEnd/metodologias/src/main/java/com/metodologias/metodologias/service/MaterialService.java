@@ -2,6 +2,8 @@ package com.metodologias.metodologias.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.metodologias.metodologias.controller.dto.MaterialDTO;
@@ -30,6 +32,13 @@ public class MaterialService {
 
 	public Material convertToMaterial(final MaterialDTO material) {
 		return Mhelper.modelMapper().map(material, Material.class);
+	}
+
+	public MaterialDTO insertMaterial(MaterialDTO material) throws MaterialDuplicated {
+		Optional<Material> _material = materialRepository.findByNombreAndCategoria(material.getNombre(),material.getCategoria());
+		if (_material.isPresent()) 
+			throw new MaterialDuplicated();
+		return this.convertToMaterialDTO(materialRepository.save(this.convertToMaterial(material)));
 	}
 
 }
