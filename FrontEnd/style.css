@@ -12,10 +12,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
+footer {
+    width: 100%;
+    bottom: 0;
+}
 
 li{
     text-decoration: none;
+}
+
+strong {
+    font-weight: 900;
 }
 
 .content-mats{
@@ -93,15 +100,25 @@ button:hover, a.btn:hover {
     color: #5D8026 !important;
 }
 
+.img-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.img-btn:hover {
+    border: none !important;
+    filter: brightness(1.4);
+    color: inherit !important;
+}
+
+
 
 .main-container {
     display: flex !important;
-    position: absolute;
 	top:0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-    z-index: -5;
 }
 
 .mbot {
