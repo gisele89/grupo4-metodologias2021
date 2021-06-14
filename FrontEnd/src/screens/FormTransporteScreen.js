@@ -7,7 +7,7 @@ const FormTransporteScreen ={
         <form class="col-lg-4 m-auto">
             <h2 class="color-green mb-3 mt-4">
                 Postulate
-            </h1>
+            </h2>
             <div class="mb-3">
                 <input type="text" class="form-control form-control-sm" id="nameInput" placeholder="Nombre/s">
             </div>
