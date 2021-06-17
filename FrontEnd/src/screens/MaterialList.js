@@ -1,6 +1,7 @@
 
-import { getMaterial, registerMaterial } from '../api';
+import { deleteMaterial, getMaterial, registerMaterial } from '../api';
 import {materiales} from '../data.json'
+import { rerender } from '../utils';
 
 
 const mats = materiales;
@@ -32,19 +33,26 @@ const MaterialList ={
             let imagen = document.getElementById('material-img').value;
             
             const data = await registerMaterial({
-                
+
                 name: nombre,
                 descripcion: desc,
                 img: imagen,
                 
+            }); 
+        });
+
+        const deleteButtons = document.getElementsByClassName("delete-button");
+        Array.from(deleteButtons).forEach(deleteButton =>{
+            deleteButton.addEventListener('click', async() => {
+                deleteMaterial(deleteButton.id);
+                rerender(MaterialList);
             });
-          
         });
     },
 
     render:async()=>{
-        const datos =   await getMaterial();
-        console.log(datos);
+        
+        const datos =  await getMaterial();
         return `
             <div>
             <div class="mat-form" id="mat-form">
@@ -92,7 +100,10 @@ const MaterialList ={
                                 <figure class="card-back">
                                     <p>${dato.descripcion}</p>
                                 </figure>
+                                
                             </div>
+                            <i class="fas fa-edit" id="edit-mat"></i>
+                            <button class="delete-button" id="${dato.idMaterial}"><i class="fas fa-times" ></i></button>
                         </div>
                     </div>
                     `).join('\n')}

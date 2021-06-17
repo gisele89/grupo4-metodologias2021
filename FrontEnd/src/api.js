@@ -51,3 +51,49 @@ export const getMaterial = async () =>{
         return { error: err.response.data.message || err.message };
         }
 };
+
+
+export const deleteMaterial = async (id) =>{
+    try{
+        const response = await axios({
+            url: `${apiUrl}/materiales/${id}`,
+            method: 'DELETE',
+            headers:{
+                'Content-Type': 'application-json',
+            },
+        });
+        if (response.status !== 200) {
+            throw new Error(response.data.message);
+        }
+        return response.data;
+        
+        }catch (err) {
+        return { error: err.response.data.message || err.message };
+        }
+        
+}
+
+export const update = async ({name, descripcion, img, id}) =>  {
+    try{
+        const response = await axios({
+            url: `${apiUrl}/materiales/${id}`,
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data:  {    
+                name,
+                descripcion,
+                img,
+            },
+        });
+        if(response.statusText !== 'OK'){
+            throw new Error(response.data.message);
+        }
+        return response.data;
+    }
+    catch(err){
+        console.log(err);
+        return {error: err.response.data.message || err.message}
+    }
+};
