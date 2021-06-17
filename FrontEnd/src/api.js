@@ -36,8 +36,7 @@ export const getMaterial = async () =>{
             url: `${apiUrl}/materiales/`,
             method: 'GET',
             headers:{
-
-                'Content-Type': 'application-json',
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin',
             },
         });
         console.log(response)
@@ -74,21 +73,22 @@ export const deleteMaterial = async (id) =>{
         
 }
 
-export const update = async ({name, descripcion, img, id}) =>  {
+export const updateMaterial = async ({nombre, descripcion,  id}) =>  {
     try{
+        console.log(id)
         const response = await axios({
             url: `${apiUrl}/materiales/${id}`,
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin',
             },
             data:  {    
-                name,
+                nombre,
                 descripcion,
-                img,
+                
             },
         });
-        if(response.statusText !== 'OK'){
+        if(response.status !== 200){
             throw new Error(response.data.message);
         }
         return response.data;
