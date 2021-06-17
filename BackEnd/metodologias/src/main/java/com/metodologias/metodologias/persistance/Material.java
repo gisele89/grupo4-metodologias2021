@@ -16,7 +16,15 @@ public class Material {
 	@Column(name = "id_material")
 	private Long idMaterial;
 	
+
+	@Column(nullable = true)
+	private String nombre;
 	
+	@Column(nullable = true)
+	private String img;
+	
+	@Column(nullable = true)
+	private String descripcion;
 	
 	public String getImg() {
 		return img;
@@ -34,14 +42,6 @@ public class Material {
 		this.descripcion = descripcion;
 	}
 
-	@Column(nullable = false)
-	private String nombre;
-	
-	@Column(nullable = false)
-	private String img;
-	
-	@Column(nullable = false)
-	private String descripcion;
 
 	public Long getIdMaterial() {
 		return idMaterial;

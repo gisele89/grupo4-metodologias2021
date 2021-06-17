@@ -33,7 +33,7 @@ const MaterialList ={
             
             const data = await registerMaterial({
                 
-                name: nombre,
+                nombre: nombre,
                 descripcion: desc,
                 img: imagen,
                 
