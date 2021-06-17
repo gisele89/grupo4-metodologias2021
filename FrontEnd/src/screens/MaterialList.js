@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 import { deleteMaterial, getMaterial, registerMaterial } from '../api';
+=======
+
+import { getMaterial, registerMaterial } from '../api';
+>>>>>>> a6091bbdae849b8ffd540645bd39bb85036331be
 import {materiales} from '../data.json'
 import { rerender } from '../utils';
 
@@ -24,6 +29,10 @@ const MaterialList ={
             contentMats.style.opacity =  '1';
         })
 
+       
+         
+       
+
         document.getElementById('register-material')
         .addEventListener("submit", async (e) =>{
             e.preventDefault();
@@ -47,6 +56,16 @@ const MaterialList ={
                 deleteMaterial(deleteButton.id);
                 rerender(MaterialList);
             });
+            let imagene = document.getElementById('material-img').files[0];
+            let reader = new FileReader();
+            reader.readAsDataURL(imagene);
+            reader.onload = function () {
+              const data =  registerMaterial({
+                nombre: nombre,
+                descripcion: desc,
+                img: reader.result
+                });
+            };
         });
     },
 
