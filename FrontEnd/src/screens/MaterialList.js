@@ -27,21 +27,18 @@ const MaterialList ={
         .addEventListener("submit", async (e) =>{
             e.preventDefault();
             console.log('subiendo....')
-            console.log(document.getElementById('material-name').value);
-            console.log(document.getElementById('material-description').value);
-            console.log(document.getElementById('material-img').value);
-        /*    const data = await registerMaterial({
-                name: document.getElementById('material-name').value,
-                descripcion: document.getElementById('material-descripcion').value,
-                img: document.getElementById('material-img').value,
-                //falta la imagen
+            let nombre = document.getElementById('material-name').value;
+            let desc = document.getElementById('material-description').value;
+            let imagen = document.getElementById('material-img').value;
+            
+            const data = await registerMaterial({
+                
+                name: nombre,
+                descripcion: desc,
+                img: imagen,
+                
             });
-            if(data.error){
-                console.log(data.error);
-            }
-            else{
-                console.log('Algo')
-            }*/
+          
         });
     },
 

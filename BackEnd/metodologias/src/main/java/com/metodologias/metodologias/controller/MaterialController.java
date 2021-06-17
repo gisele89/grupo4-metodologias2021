@@ -27,7 +27,7 @@ import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController()
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 @RequestMapping("/materiales")
 public class MaterialController {
 	public static final Log LOGGER = LogFactory.getLog(MaterialController.class);
@@ -47,7 +47,8 @@ public class MaterialController {
 		}
 	}
 
-	@PostMapping("/")
+	//@PostMapping("/")
+	@RequestMapping(value = "/", produces = "application/json", method = RequestMethod.POST)
 	@ApiResponses({
 			@ApiResponse(code = 200, message = "Ok"),
 			@ApiResponse(code = 500, message = "Internal Server Error")

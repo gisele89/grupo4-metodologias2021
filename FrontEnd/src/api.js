@@ -2,20 +2,22 @@ import axios from 'axios';
 
 import {apiUrl} from './config';
 
-export const registerMaterial = async ({name,descripcion}) =>{
+export const registerMaterial = async ({name,descripcion,img}) =>{
+    console.log(name);
     try{
         const response = await axios({
-            url: ``,
+            url: `${apiUrl}/materiales/`,
             method: 'POST',
-            headers:{ //cualquier cosa cambiar por heather
+            headers:{
                 'Content-Type': 'application-json',
             },
-            data: {
+            data: JSON.stringify({
                 name,
-                descripcion
-            },
+                descripcion,
+                img
+            }),
         });
-        if(response.statusText !== 'OK'){
+        if(response.status !== 200){
             throw new Error(response.data.message);
         }
         return response.data;
