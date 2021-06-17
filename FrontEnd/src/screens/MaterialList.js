@@ -1,5 +1,5 @@
 
-import { registerMaterial } from '../api';
+import { getMaterial, registerMaterial } from '../api';
 import {materiales} from '../data.json'
 
 
@@ -7,12 +7,13 @@ const mats = materiales;
 
 
 const MaterialList ={ 
-    after_render:()=>{
+    after_render: async()=>{
         const contentMats = document.getElementById('content-mats')
         const formContainer = document.getElementById('mat-form');
         const eventoForm = document.getElementById('add-mat');
         const btnCerrar = document.getElementById('btn-cerrar');
         eventoForm.addEventListener('click', () =>{
+            
             //formContainer.style.display = 'block';
             formContainer.style.visibility = 'visible';
             contentMats.style.opacity =  '0.4';
@@ -45,6 +46,8 @@ const MaterialList ={
     },
 
     render:async()=>{
+        const datos =   await getMaterial();
+        console.log(datos);
         return `
             <div>
             <div class="mat-form" id="mat-form">
@@ -80,17 +83,17 @@ const MaterialList ={
             </div>          
             </div>
             <div class="content-mats" id="content-mats">
-                ${mats.map(mat =>
+                ${datos.map(dato =>
                     `
                     <div class="contenedor">
                         <div class="card-container">
                             <div class="card-material">
                                 <figure class="card-front">
-                                    <img src="${mat.img}" />
-                                    <h4>${mat.nombre}</h4>
+                                    <img src="${dato.img}" />
+                                    <h4>${dato.nombre}</h4>
                                 </figure>
                                 <figure class="card-back">
-                                    <p>${mat.descripcion}</p>
+                                    <p>${dato.descripcion}</p>
                                 </figure>
                             </div>
                         </div>

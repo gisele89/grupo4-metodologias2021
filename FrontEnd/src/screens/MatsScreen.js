@@ -1,16 +1,21 @@
 
+import { getMaterial } from '../api';
 import CargarMaterial from '../components/CargarMaterial';
 
 
 
 const MatsScreen = {
 
-    after_render: () =>{
+    after_render: async() =>{
+        
+    
         const btncerrar = document.getElementById('btn-cerrar');
         const formulario = document.getElementById('formulario');
         const contenedor = document.getElementById('contenedor');
         document.getElementById("hola").
         addEventListener('click', ()=>{
+        
+
             contenedor.style.display = 'block';
             btncerrar.innerHTML = `<button type="button" id="cerrar"><i class="fas fa-times"></i></button>`;
             formulario.innerHTML = CargarMaterial.render();
@@ -25,7 +30,9 @@ const MatsScreen = {
     })
     },
     
-    render: ()=>{
+    render: async()=>{
+        console.log('hola')
+   
         return `
         <div>
             <h2>Componente Materiales</h2>
