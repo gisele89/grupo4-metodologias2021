@@ -31,3 +31,5 @@ _____________________________
 > :heavy_check_mark: Jira:  https://grupo4-metodologias2021.atlassian.net/jira/software/projects/GMT/boards/1
 
 > :heavy_check_mark: Figma: https://www.figma.com/file/O4sQKumExGTjBSnL1ru1TZ/Grupo-4-TPE-Metodolog%C3%ADas-2021-team-library?node-id=0%3A1
+
+> :heavy_check_mark: Tablas de BD en vertabelo: https://my.vertabelo.com/model/mP6GOoeIUQboM3iyuf88slCK3th7qVE9
