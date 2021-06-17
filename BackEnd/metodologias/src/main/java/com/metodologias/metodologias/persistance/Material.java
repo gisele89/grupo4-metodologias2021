@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "material")
 public class Material {
@@ -20,8 +22,11 @@ public class Material {
 	@Column(nullable = true)
 	private String nombre;
 	
-	@Column(nullable = true)
+	@Column(nullable = true ,columnDefinition="MEDIUMTEXT")
+	@Type(type="text")
 	private String img;
+	//@Column(name="LONG_DESCRIPTION" , length = 65535, columnDefinition="TEXT")
+	
 	
 	@Column(nullable = true)
 	private String descripcion;
