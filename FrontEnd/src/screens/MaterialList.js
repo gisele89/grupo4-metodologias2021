@@ -1,4 +1,5 @@
 
+
 import { getMaterial, registerMaterial } from '../api';
 import {materiales} from '../data.json'
 
@@ -23,22 +24,26 @@ const MaterialList ={
             contentMats.style.opacity =  '1';
         })
 
+       
+         
+       
+
         document.getElementById('register-material')
         .addEventListener("submit", async (e) =>{
             e.preventDefault();
             console.log('subiendo....')
             let nombre = document.getElementById('material-name').value;
             let desc = document.getElementById('material-description').value;
-            let imagen = document.getElementById('material-img').value;
-            
-            const data = await registerMaterial({
-                
+            let imagene = document.getElementById('material-img').files[0];
+            let reader = new FileReader();
+            reader.readAsDataURL(imagene);
+            reader.onload = function () {
+              const data =  registerMaterial({
                 nombre: nombre,
                 descripcion: desc,
-                img: imagen,
-                
-            });
-          
+                img: reader.result
+                });
+            };
         });
     },
 
