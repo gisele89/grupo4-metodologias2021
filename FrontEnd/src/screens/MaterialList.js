@@ -13,19 +13,36 @@ const MaterialList ={
         const formContainer = document.getElementById('mat-form');
         const eventoForm = document.getElementById('add-mat');
         const btnCerrar = document.getElementById('btn-cerrar');
-        const editarM = false;
+        const mostrarImg = document.getElementById('show-img');
+        const editarM = false;//creo que no se usa
+
+        const inicializarForm = () =>{
+            document.getElementById('material-name').value = '';
+            document.getElementById('material-description').value = '';
+            document.getElementById('btn-sbm').value = '';
+           //document.getElementById('material-img').files[0] = '';
+        }
+
         eventoForm.addEventListener('click', () =>{
-            
             //formContainer.style.display = 'block';
             formContainer.style.visibility = 'visible';
             contentMats.style.opacity =  '0.4';
+            inicializarForm();
         });
         btnCerrar.addEventListener('click', () =>{
             formContainer.style.visibility = 'hidden';
             contentMats.style.opacity =  '1';
+            
         })
 
-       
+        const previewImg = document.getElementById('material-img').addEventListener('change', () =>{
+            console.log('hola3232')
+            let img = document.getElementById('material-img').files[0];
+            let src = URL.createObjectURL(img);
+            console.log(src)
+            mostrarImg.src = src;
+            mostrarImg.style.display = 'block';
+        })
 
         document.getElementById('register-material')
         .addEventListener("submit", async (e) =>{
@@ -33,16 +50,23 @@ const MaterialList ={
             console.log('subiendo....')
             let nombre = document.getElementById('material-name').value;
             let desc = document.getElementById('material-description').value;
+            let idMaterial = document.getElementById('btn-sbm').value;
             let imagene = document.getElementById('material-img').files[0];
+    
 
-            const material = mats.filter((mat) => mat.nombre == nombre)
+            console.log(idMaterial)
 
-            if(material.length > 0 ){
+            const material = mats.filter((mat) => mat.nombre == nombre) //el problema esta aca
+
+            
+            console.log('antes de entrar')
+            console.log(idMaterial)
+            if(idMaterial > 0 ){
                 console.log('actualiza')
                 const dataU = updateMaterial({
                     nombre: nombre,
                     descripcion: desc,
-                    id: material[0].idMaterial
+                    id: idMaterial
                 })
             }
             else{
@@ -77,7 +101,14 @@ const MaterialList ={
                 const actuMat = mats.find((mat) => mat.idMaterial == updateButton.id)
                 document.getElementById('material-name').value = actuMat.nombre;
                 document.getElementById('material-description').value = actuMat.descripcion; 
-
+                document.getElementById('btn-sbm').value = updateButton.id; 
+                /* let imagene = document.getElementById('material-img').files[0].value;
+    
+                let src = URL.createObjectURL(imagene);
+             
+                mostrarImg.src = src;
+                mostrarImg.style.display = 'block';*/
+                console.log(updateButton.id)
                 formContainer.style.visibility = 'visible';
                 contentMats.style.opacity =  '0.4';
             });
@@ -100,6 +131,7 @@ const MaterialList ={
                 <div class="form-items">
                     <div class="right">
                         <h5>Form</h5>
+                        <img class="preview-img" src="" id="show-img" />
                         <input type="file" id="material-img" name="material-img" accept="image/*" />
                     </div>
                     <div class="left">
@@ -115,7 +147,7 @@ const MaterialList ={
                     </div>
                 </div>
                 <div class="align-r">
-                    <button type="submit"  class="btn text-white background-green rounded-pill mr-0 ml-auto">Subir item</button>
+                    <button type="submit" id='btn-sbm' class="btn text-white background-green rounded-pill mr-0 ml-auto">Subir item</button>
                 </div>
             </form>
             </div>
@@ -136,8 +168,8 @@ const MaterialList ={
                                 </figure>
                                 
                             </div>
-                            <button class="update-button" id="${dato.idMaterial}"> <i class="fas fa-edit"></i></button>
-                            <button class="delete-button" id="${dato.idMaterial}"><i class="fas fa-times" ></i></button>
+                            <button class="update-button btn-u btn btn-success" id="${dato.idMaterial}"> <i class="fas fa-edit"></i></button>
+                            <button class="delete-button btn-d btn btn-danger" id="${dato.idMaterial}"><i class="fas fa-times" ></i></button>
                         </div>
                     </div>
                     `).join('\n')}
