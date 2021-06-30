@@ -33,6 +33,15 @@ public class CartoneroService {
 		}
 		throw new CartoneroNotFound();
 	}
+	
+	public CartoneroDTO editCartonero(Long idCartonero, CartoneroDTO cartonero) throws CartoneroNotFound {
+		Optional<Cartonero> _cartonero = cartoneroRepository.findById(idCartonero);
+		if(_cartonero.isPresent()) {
+			cartonero.setIdCartonero(idCartonero);
+			return this.convertToCartoneroDTO(cartoneroRepository.save(this.convertToCartonero(cartonero)));
+		}
+		throw new CartoneroNotFound();
+	}
 
 	public CartoneroDTO convertToCartoneroDTO(final Cartonero cartonero) {
 		return Mhelper.modelMapper().map(cartonero, CartoneroDTO.class);
