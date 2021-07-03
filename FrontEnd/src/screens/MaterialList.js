@@ -1,6 +1,6 @@
 
 import { deleteMaterial, getMaterial, registerMaterial, updateMaterial } from '../api';
-import {materiales} from '../data.json'
+//import {materiales} from '../data.json'
 import { rerender } from '../utils';
 
 
@@ -14,7 +14,6 @@ const MaterialList ={
         const eventoForm = document.getElementById('add-mat');
         const btnCerrar = document.getElementById('btn-cerrar');
         const mostrarImg = document.getElementById('show-img');
-        const editarM = false;//creo que no se usa
 
         const inicializarForm = () =>{
             document.getElementById('material-name').value = '';
@@ -24,7 +23,6 @@ const MaterialList ={
         }
 
         eventoForm.addEventListener('click', () =>{
-            //formContainer.style.display = 'block';
             formContainer.style.visibility = 'visible';
             contentMats.style.opacity =  '0.4';
             inicializarForm();
@@ -36,10 +34,8 @@ const MaterialList ={
         })
 
         const previewImg = document.getElementById('material-img').addEventListener('change', () =>{
-            console.log('hola3232')
             let img = document.getElementById('material-img').files[0];
             let src = URL.createObjectURL(img);
-            console.log(src)
             mostrarImg.src = src;
             mostrarImg.style.display = 'block';
         })
@@ -53,12 +49,10 @@ const MaterialList ={
             let idMaterial = document.getElementById('btn-sbm').value;
             let imagene = document.getElementById('material-img').files[0];
     
-
             console.log(idMaterial)
 
-            const material = mats.filter((mat) => mat.nombre == nombre) //el problema esta aca
+            //const material = mats.filter((mat) => mat.nombre == nombre) //el problema esta aca
 
-            
             console.log('antes de entrar')
             console.log(idMaterial)
             if(idMaterial > 0 ){
@@ -105,7 +99,6 @@ const MaterialList ={
                 /* let imagene = document.getElementById('material-img').files[0].value;
     
                 let src = URL.createObjectURL(imagene);
-             
                 mostrarImg.src = src;
                 mostrarImg.style.display = 'block';*/
                 console.log(updateButton.id)
