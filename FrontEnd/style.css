@@ -99,7 +99,7 @@ a.nav-link:hover {
 
 button:hover, a.btn:hover {
     border: 1px solid #5D8026 !important;
-    background-color: white;
+    background-color: white !important;
     color: #5D8026 !important;
 }
 
@@ -189,4 +189,12 @@ button:hover, a.btn:hover {
 
 .border-bottom-green-thin {
     border-bottom: 3px solid #5D8026;
+}
+
+.ojo {
+    position: absolute;
+    z-index: 10;
+    bottom: 8px;
+    margin-right: 8px;
+    cursor: pointer;
 }
