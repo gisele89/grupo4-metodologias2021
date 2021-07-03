@@ -8,11 +8,11 @@ ___________
 
 #### Lista de requerimientos para desarrollar el producto
 
-:small_blue_diamond: Obtener listado manual de los pedidos de retiro (De las personas que pidieron recolección)
+:small_blue_diamond: Log in de secretaria
 
-:small_blue_diamond:  ABM de materiales aceptados (Secretaria)
+:small_blue_diamond:  Listar materiales acopiados por cartonero
 
-:small_blue_diamond:  Pesaje manual sin consulta de recorrido (reducido)
+:small_blue_diamond:  Alta, baja y modificacion de cartonero
 _____________________________
 ### :link: Indicaciones y links importantes
 
