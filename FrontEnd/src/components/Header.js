@@ -20,10 +20,13 @@ const Header ={
                     <a class="nav-link color-green selected-menu" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link color-green" href="cartelera.html">Cartelera</a>
+                    <a class="nav-link color-green" href="/#/cartelera">Cartelera</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link color-green" href="/#/materiales">Materiales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-green" href="/#/registro">Registro</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link color-green" href="/#/postulate"><span>Postulate</span></a>

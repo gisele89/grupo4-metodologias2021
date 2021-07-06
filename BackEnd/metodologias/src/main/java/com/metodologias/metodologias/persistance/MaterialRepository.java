@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MaterialRepository extends JpaRepository<Material, Long> {
 
-	Optional<Material> findByNombreAndCategoria(String nombre, String categoria);
+	Optional<Material> findByNombre(String nombre);
 
 }

@@ -35,7 +35,7 @@ public class MaterialService {
 	}
 
 	public MaterialDTO insertMaterial(MaterialDTO material) throws MaterialDuplicated {
-		Optional<Material> _material = materialRepository.findByNombreAndCategoria(material.getNombre(),material.getCategoria());
+		Optional<Material> _material = materialRepository.findByNombre(material.getNombre());
 		if (_material.isPresent()) 
 			throw new MaterialDuplicated();
 		return this.convertToMaterialDTO(materialRepository.save(this.convertToMaterial(material)));

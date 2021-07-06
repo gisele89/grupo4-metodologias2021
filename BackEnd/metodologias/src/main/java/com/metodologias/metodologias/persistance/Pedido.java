@@ -25,7 +25,11 @@ public class Pedido {
 
 	@Column(nullable = false)
 	private String nombre;
+	
+	@Column(nullable = false)
+	private String apellido;
 
+	
 	@Column(nullable = false)
 	private String horario;
 
@@ -89,5 +93,12 @@ public class Pedido {
 		this.peso = peso;
 	}
 
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
 	
 }

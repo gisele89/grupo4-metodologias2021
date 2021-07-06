@@ -7,6 +7,8 @@ import PostulateScreen from "./screens/PostulateScreen.js";
 import FormMaterialesScreen from "./screens/FormMaterialesScreen.js";
 import FormTransporteScreen from "./screens/FormTransporteScreen.js";
 import Footer from "./components/Footer.js";
+import CarteleraScreen from "./screens/CarteleraScreen.js";
+import RegistroScreen from "./screens/RegistroScreen.js";
 
 const routes = {
     "/matsScreen": MatsScreen,
@@ -15,6 +17,8 @@ const routes = {
     "/postulate": PostulateScreen,
     "/form-materiales": FormMaterialesScreen, 
     "/form-transporte": FormTransporteScreen,
+    "/cartelera": CarteleraScreen,
+    "/registro": RegistroScreen,
 }
 const router = async () => {
     const request = parseRequestUrl();
