@@ -310,6 +310,16 @@ button:hover, a.btn:hover {
 .border-bottom-green-thin {
     border-bottom: 3px solid #5D8026;
 }
+
+
+.ojo {
+    position: absolute;
+    z-index: 10;
+    bottom: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
 /* Media querys */
 
 @media (max-width: 360px){
