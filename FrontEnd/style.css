@@ -25,6 +25,11 @@ strong {
     font-weight: 900;
 }
 
+.content-mats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);        
+}
+
 :root{
     --primary-color: #5D8026;
 }
