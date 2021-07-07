@@ -16,10 +16,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `material` (
   `id_material` int(11) NOT NULL,
-  `categoria` varchar(60) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `imagen` text NOT NULL,
-  `condiciones` text NOT NULL
+  `img` longtext NOT NULL,
+  `descripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 

@@ -14,6 +14,11 @@ public class MaterialAcopioService {
 	MaterialAcopioRepository materialAcopioRepository;
 
 	public MaterialAcopioDTO insertMaterialAcopio(MaterialAcopioDTO materialAcopio) {
+		if (materialAcopio.getIdMaterialAcopio()!= null) {
+			materialAcopio.setPesoAnterior(materialAcopio.getPeso());
+		}
+		
+		//materialAc
 		return this.convertToMaterialAcopioDTO(materialAcopioRepository.save(this.convertToMaterialAcopio(materialAcopio)));
 	}
 
