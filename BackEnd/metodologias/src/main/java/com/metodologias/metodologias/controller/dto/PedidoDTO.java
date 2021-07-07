@@ -5,17 +5,9 @@ public class PedidoDTO {
 	private Long idPedido;
 	private String fecha;
 	private String nombre;
-	private String apellido;
 	private String horario;
 	private String telefono;
 	private String direccion;
-	public String getApellido() {
-		return apellido;
-	}
-
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
 	private Double peso;
 	
 	

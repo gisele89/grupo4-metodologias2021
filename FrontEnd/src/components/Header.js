@@ -1,19 +1,10 @@
-import { getUser } from "../utils";
 
 
 const Header ={
-    after_render:()=>{
-        console.log('entro aca')
-        const navegacion = document.getElementById('navbar');
-        if(getUser()!== ''){
-            navegacion.style.backgroundColor= 'navbar-dark'
-        }
-    },
-
     render: ()=>{
         return`
-        <nav class="navbar navbar-expand-lg navbar-light border-bottom-green-thick" id="navbar">
-        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom-green-thick">
+    <div class="container">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="home-logo" href='index.html'> <img src="./media/CRUT-1.png"/ height="72px"></a>
@@ -29,19 +20,13 @@ const Header ={
                     <a class="nav-link color-green selected-menu" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link color-green" href="/#/cartelera">Cartelera</a>
+                    <a class="nav-link color-green" href="cartelera.html">Cartelera</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link color-green" href="/#/materiales">Materiales</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link color-green" href="/#/registro">Registro</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link color-green" href="/#/postulate"><span>Postulate</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-green" href="/#/registro-secretaria"><span>Registrarse</span></a>
                 </li>
             </ul>
         </div>

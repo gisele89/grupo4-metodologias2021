@@ -8,9 +8,7 @@ import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,10 +23,8 @@ import com.metodologias.metodologias.service.MaterialNotFound;
 import com.metodologias.metodologias.service.MaterialService;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController()
-@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
 @RequestMapping("/materiales")
 public class MaterialController {
 	public static final Log LOGGER = LogFactory.getLog(MaterialController.class);
@@ -48,7 +44,7 @@ public class MaterialController {
 		}
 	}
 
-	@PostMapping("/nuevo")
+	@PostMapping("/")
 	@ApiResponses({
 			@ApiResponse(code = 200, message = "Ok"),
 			@ApiResponse(code = 500, message = "Internal Server Error")

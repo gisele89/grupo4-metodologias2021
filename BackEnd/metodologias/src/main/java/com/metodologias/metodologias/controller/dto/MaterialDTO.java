@@ -2,9 +2,10 @@ package com.metodologias.metodologias.controller.dto;
 
 public class MaterialDTO {
 	private Long idMaterial;
+	private String categoria;
 	private String nombre;
-	private String img;
-	private String descripcion;
+	private String imagen;
+	private String condiciones;
 	
 	
 	public MaterialDTO() {
@@ -16,25 +17,29 @@ public class MaterialDTO {
 	public void setIdMaterial(Long idMaterial) {
 		this.idMaterial = idMaterial;
 	}
-	
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getImg() {
-		return img;
+	public String getImagen() {
+		return imagen;
 	}
-	public void setImg(String img) {
-		this.img = img;
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
-	public String getDescripcion() {
-		return descripcion;
+	public String getCondiciones() {
+		return condiciones;
 	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-	
+	public void setCondiciones(String condiciones) {
+		this.condiciones = condiciones;
+	} 
 	
 }
