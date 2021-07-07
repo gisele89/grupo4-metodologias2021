@@ -56,69 +56,22 @@
     <main class="flex-shrink-0 mb-5">
         <div class="container mt-5">
             <form class="col-lg-8 m-auto">
-                <div class="mb-4">
-                    <select class="form-select form-select-sm" aria-label="Franja horaria" id="filterSelect" aria-describedby="volumeHelp">
-                        <option selected disabled>Filtrar por:</option>
-                        <option value="1">Apellido del cartonero</option>
-                        <option value="2">Peso acumulado</option>
-                    </select>
-                </div>
-                <div class="shadow px-3 py-1 mb-3 bg-body rounded">
-                    <div class="d-flex justify-content-between align-items-center row pt-1">
-                        <div class="text-center col-3">
-                            <h6 class="color-green">Nombre</h6>
-                            <h6 class="text-secondary">Juan Pérez</h6>
+                <h3 class="text-secondary mb-5 mt-4">
+                    <img class="ps-1 pe-4" src="./src/media/flecha-izq.svg">Volver al listado
+                </h3>
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row">
+                        <div class="text-center col-2">
+                            <img src="./src/media/botellas-plastico.svg" alt="botella de plástico" height="35px">
                         </div>
                         <div class="text-center col-2">
-                            <h6 class="color-green mt-2 mb-1">Cant. acum.</h6>
-                            <h4 class="color-green"><strong>20</strong> Kg</h4>
-                        </div>
-                        <div class="col-3">
-                            <select class="form-select form-select-sm" aria-label="Default select example">
-                                <option selected disabled>Tipo Material:</option>
-                                <option value="1">Carton / Papel</option>
-                                <option value="2">Metal</option>
-                                <option value="3">Vidrio</option>
-                              </select>
-                        </div>
-                        <div class="col-2">
-                            <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kg">
-                        </div>
-                        <div class="col-1">
-                            <button class="img-btn" id="btn-ok" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Confirmar cambio">
-                                <img src="./src/media/tick.svg" alt="boton de confirmar">
-                            </button>
-                        </div>
-                        <div class="col-1">
-                            <button class="img-btn" id="btn-undo" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Deshacer cambio">
-                                <img src="./src/media/rollback.svg" alt="boton de rollback">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center col p-3">
-                        <h6 class="color-green">Materiales</h6>
-                        <img src="./src/media/comunicaciones.svg" alt="revista" height="35px">
-                        <img src="./src/media/bolsa-de-la-compra.svg" alt="bolsa de cartón" height="35px">
-                        <img src="./src/media/pintura-en-aerosol.svg" alt="aerosol" height="35px">
-                        <img src="./src/media/bolsa-de-plastico.svg" alt="bolsa de plástico" height="35px">
-                        <img src="./src/media/lata.svg" alt="conserva en lata" height="35px">
-                        <img src="./src/media/botellas-plastico.svg" alt="botella de plástico" height="35px">
-                        <img src="./src/media/periodico.svg" alt="diarios" height="35px">
-                        <img src="./src/media/botella-vidrio.svg" alt="botella de vidrio" height="35px">
-                        <img src="./src/media/soda.svg" alt="bebida en lata" height="35px">
-                        <img src="./src/media/instant-coffee.svg" alt="tetrapack" height="35px">
-                    </div>
-                </div>
-                <div class="shadow px-3 py-1 mb-3 bg-body rounded">
-                    <div class="d-flex justify-content-between align-items-center row">
-                        <div class="text-center col-3">
-                            <h6 class="color-green">Nombre</h6>
-                            <h6 class="text-secondary">Pedro Rodríguez</h6>
-                        </div>
-                        <div class="text-center col-3">
-                            <h6 class="color-green mt-2 mb-1">Cant. acum.</h6>
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
                             <h4 class="color-green"><strong>10</strong> Kg</h4>
                         </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Plástico</h6>
+                        </div>
                         <div class="col-4">
                             <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
                         </div>
@@ -134,40 +87,130 @@
                         </div>
                     </div>
                 </div>
-                <div class="shadow px-3 py-1 mb-3 bg-body rounded">
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
                     <div class="d-flex justify-content-between align-items-center row">
-                        <div class="text-center col-3">
-                            <h6 class="color-green">Nombre</h6>
-                            <h6 class="text-secondary">Giancarlo Cristiano</h6>
+                        <div class="text-center col-2">
+                            <img src="./src/media/bolsa-de-plastico.svg" alt="bolsa de plástico" height="35px">
                         </div>
-                        <div class="text-center col-3">
-                            <h6 class="color-green mt-2 mb-1">Cant. acum.</h6>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
+                            <h4 class="color-green"><strong>35</strong> Kg</h4>
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Bolsas</h6>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-ok" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Confirmar cambio">
+                                <img src="./src/media/tick.svg" alt="boton de confirmar">
+                            </button>
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-undo" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Deshacer cambio">
+                                <img src="./src/media/rollback.svg" alt="boton de rollback">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row">
+                        <div class="text-center col-2">
+                            <img src="./src/media/comunicaciones.svg" alt="revista" height="35px">
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
+                            <h4 class="color-green"><strong>20</strong> Kg</h4>
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Revistas</h6>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-ok" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Confirmar cambio">
+                                <img src="./src/media/tick.svg" alt="boton de confirmar">
+                            </button>
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-undo" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Deshacer cambio">
+                                <img src="./src/media/rollback.svg" alt="boton de rollback">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row">
+                        <div class="text-center col-2">
+                            <img src="./src/media/botella-vidrio.svg" alt="botella de vidrio" height="35px">
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
+                            <h4 class="color-green"><strong>10</strong> Kg</h4>
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Vidrio</h6>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-ok" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Confirmar cambio">
+                                <img src="./src/media/tick.svg" alt="boton de confirmar">
+                            </button>
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-undo" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Deshacer cambio">
+                                <img src="./src/media/rollback.svg" alt="boton de rollback">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row">
+                        <div class="text-center col-2">
+                            <img src="./src/media/periodico.svg" alt="diarios" height="35px">
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
+                            <h4 class="color-green"><strong>15</strong> Kg</h4>
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Diarios</h6>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-ok" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Confirmar cambio">
+                                <img src="./src/media/tick.svg" alt="boton de confirmar">
+                            </button>
+                        </div>
+                        <div class="col-1">
+                            <button class="img-btn" id="btn-undo" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Deshacer cambio">
+                                <img src="./src/media/rollback.svg" alt="boton de rollback">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row">
+                        <div class="text-center col-2">
+                            <img src="./src/media/pintura-en-aerosol.svg" alt="aerosol" height="35px">
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
                             <h4 class="color-green"><strong>5</strong> Kg</h4>
                         </div>
-                        <div class="col-4">
-                            <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
-                        </div>
-                        <div class="col-1">
-                            <button class="img-btn" id="btn-ok" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Confirmar cambio">
-                                <img src="./src/media/tick.svg" alt="boton de confirmar">
-                            </button>
-                        </div>
-                        <div class="col-1">
-                            <button class="img-btn" id="btn-undo" data-bs-toggle="tooltip" data-bs-pyacement="top" title="Deshacer cambio">
-                                <img src="./src/media/rollback.svg" alt="boton de rollback">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="shadow px-3 py-1 mb-3 bg-body rounded">
-                    <div class="d-flex justify-content-between align-items-center row">
-                        <div class="text-center col-3">
+                        <div class="text-center col-2">
                             <h6 class="color-green">Nombre</h6>
-                            <h6 class="text-secondary">Lucas González</h6>
-                        </div>
-                        <div class="text-center col-3">
-                            <h6 class="color-green mt-2 mb-1">Cant. acum.</h6>
-                            <h4 class="color-green"><strong>5</strong> Kg</h4>
+                            <h6 class="text-secondary">Aerosoles</h6>
                         </div>
                         <div class="col-4">
                             <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
@@ -184,15 +227,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="shadow px-3 py-1 mb-3 bg-body rounded">
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
                     <div class="d-flex justify-content-between align-items-center row">
-                        <div class="text-center col-3">
-                            <h6 class="color-green">Nombre</h6>
-                            <h6 class="text-secondary">Leonel Dimasi</h6>
+                        <div class="text-center col-2">
+                            <img src="./src/media/instant-coffee.svg" alt="tetrapack" height="35px">
                         </div>
-                        <div class="text-center col-3">
-                            <h6 class="color-green mt-2 mb-1">Cant. acum.</h6>
-                            <h4 class="color-green"><strong>50</strong> Kg</h4>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
+                            <h4 class="color-green"><strong>30</strong> Kg</h4>
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Tetrapack</h6>
                         </div>
                         <div class="col-4">
                             <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
@@ -209,15 +255,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="shadow px-3 py-1 mb-3 bg-body rounded">
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
                     <div class="d-flex justify-content-between align-items-center row">
-                        <div class="text-center col-3">
-                            <h6 class="color-green">Nombre</h6>
-                            <h6 class="text-secondary">Gabriel González</h6>
+                        <div class="text-center col-2">
+                            <img src="./src/media/lata.svg" alt="lata" height="35px">
                         </div>
-                        <div class="text-center col-3">
-                            <h6 class="color-green mt-2 mb-1">Cant. acum.</h6>
-                            <h4 class="color-green"><strong>40</strong> Kg</h4>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
+                            <h4 class="color-green"><strong>20</strong> Kg</h4>
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Lata</h6>
                         </div>
                         <div class="col-4">
                             <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
@@ -234,15 +283,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="shadow px-3 py-1 mb-3 bg-body rounded">
+                <div class="shadow px-3 py-1 mb-4 bg-body rounded">
                     <div class="d-flex justify-content-between align-items-center row">
-                        <div class="text-center col-3">
-                            <h6 class="color-green">Nombre</h6>
-                            <h6 class="text-secondary">José López</h6>
+                        <div class="text-center col-2">
+                            <img src="./src/media/caja.svg" alt="carton" height="35px">
                         </div>
-                        <div class="text-center col-3">
-                            <h6 class="color-green mt-2 mb-1">Cant. acum.</h6>
-                            <h4 class="color-green"><strong>0</strong> Kg</h4>
+                        <div class="text-center col-2">
+                            <h6 class="color-green mt-1 mb-0">Cant. acum.</h6>
+                            <h4 class="color-green"><strong>20</strong> Kg</h4>
+                        </div>
+                        <div class="text-center col-2">
+                            <h6 class="color-green">Nombre</h6>
+                            <h6 class="text-secondary">Cartón</h6>
                         </div>
                         <div class="col-4">
                             <input type="text" class="form-control form-control-sm" id="addKgInput" placeholder="Agregar Kilogramos">
@@ -258,7 +310,7 @@
                             </button>
                         </div>
                     </div>
-                </div>                
+                </div>
             </form>
         </div>
     </main>
