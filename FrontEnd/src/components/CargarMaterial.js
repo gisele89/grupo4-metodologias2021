@@ -2,10 +2,7 @@
 const CargarMaterial = {
 
     after_render:() => {
-        const cerrarBtn = document.getElementById('btn-cerrar');
-        cerrarBtn.addEventListener('click', ()=>{
-            console.log('se cerro');
-        })
+        
     
     },
 

@@ -19,29 +19,6 @@ public class MaterialAcopio {
 	@Column(nullable = false)
 	private Double peso;
 	
-	@Column(nullable = false)
-	private Double pesoAnterior;
-	
-	@Column(nullable = false)
-	private String  cartonero;
-	
-	
-	public Double getPesoAnterior() {
-		return pesoAnterior;
-	}
-
-	public void setPesoAnterior(Double pesoAnterior) {
-		this.pesoAnterior = pesoAnterior;
-	}
-
-	public String getCartonero() {
-		return cartonero;
-	}
-
-	public void setCartonero(String cartonero) {
-		this.cartonero = cartonero;
-	}
-
 	public Long getIdMaterialAcopio() {
 		return idMaterialAcopio;
 	}
