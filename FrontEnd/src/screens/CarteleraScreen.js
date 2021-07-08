@@ -352,13 +352,13 @@ const CarteleraScreen ={
                             </div>
                             <div class="d-flex align-items-center mb-2" height=100%>
                                 <img src="./src/media/patente.svg" class="mx-3" alt="patente"  width="26px" height="26px">
-                                <h6 class="text-secondary m-0">${cartonero.patente}</h6>
+                                <h6 class="text-secondary m-0">ABC 123</h6>
                             </div>
                         
                         </div>
                     </div>
                     <div class="mb-0 nav align-items-center justify-content-end">
-                        <button type="submit" class="btn color-green selected-menu rounded-pill mx-2">Ver ventas</button>
+                        <button type="submit" class="btn color-green selected-menu rounded-pill mx-2">Ver Detalles</button>
                         
                         <button type="submit" class="img-btn edit-cartonero" id="${cartonero.idCartonero}"> <img src="./src/media/editar.svg" class="mx-2" alt="editar" width="26px"></button>
                         <button type="submit" class="img-btn delete-cartonero" id="${cartonero.idCartonero}"> <img src="./src/media/borrar.svg" class="ml-3 mr-0" alt="borrar" width="26px"></button>
