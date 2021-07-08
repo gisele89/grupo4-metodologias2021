@@ -18,8 +18,25 @@ INSERT INTO material (nombre,img,descripcion) VALUES ('Frascos','data:image/svg+
 
  INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (1,120,100,1);
  INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (2,100,80,1);
-
- INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (1,200,100,2);
- INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (2,250,200,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (3,0,0,1);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (4,0,0,1);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (5,0,0,1);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (6,0,0,1);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (7,0,0,1);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (8,0,0,1);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (9,0,0,1);
  
 
+ 
+ 
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (1,200,100,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (2,250,200,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (3,0,0,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (4,0,0,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (5,0,0,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (6,0,0,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (7,0,0,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (8,0,0,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (9,0,0,2);
+
+ 

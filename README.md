@@ -26,7 +26,7 @@ _____________________________
 
 > :heavy_check_mark: Template de testing:  https://docs.google.com/document/d/1pILVJPR-nxHdIo_Z--1zPV48KPHYcE3jW9AUkeVBsqY/edit 
 
-> :heavy_check_mark: Diagrama de clases: https://drive.google.com/file/d/1sngRK-SwHH_mYkx8IJb9A9Z7tqw-yEA2/view?usp=sharing
+> :heavy_check_mark: Diagrama de clases: https://app.diagrams.net/#G1sngRK-SwHH_mYkx8IJb9A9Z7tqw-yEA2
 
 > :heavy_check_mark: Jira:  https://grupo4-metodologias2021.atlassian.net/jira/software/projects/GMT/boards/1/backlog
 
