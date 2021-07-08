@@ -224,7 +224,7 @@ a.nav-link:hover {
 
 button:hover, a.btn:hover {
     border: 1px solid #5D8026 !important;
-    background-color: white;
+    background-color: white !important;
     color: #5D8026 !important;
 }
 
@@ -299,6 +299,9 @@ button:hover, a.btn:hover {
     z-index: -5;
 }
 
+.border-gray {
+    border-color: #dee2e6;
+}
 
 .background-green {
     background-color: #5D8026;
@@ -315,6 +318,17 @@ button:hover, a.btn:hover {
 .border-bottom-green-thin {
     border-bottom: 3px solid #5D8026;
 }
+
+
+.ojo {
+    position: absolute;
+    z-index: 10;
+    bottom: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+
+}
+
 /* Media querys */
 
 @media (max-width: 360px){
@@ -323,4 +337,6 @@ button:hover, a.btn:hover {
         display: grid;
         grid-template-columns: repeat(1, 1fr);  
     }
+
+
 }

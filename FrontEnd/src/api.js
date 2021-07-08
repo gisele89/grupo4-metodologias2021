@@ -9,7 +9,7 @@ export const registerMaterial = async ({nombre,descripcion,img}) =>{
             url: `${apiUrl}/materiales/nuevo`,
             method: 'POST',
             headers:{
-               'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin'
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin'
             },
             data: {
                 nombre,
@@ -98,3 +98,58 @@ export const updateMaterial = async ({nombre, descripcion,  id}) =>  {
         return {error: err.response.data.message || err.message}
     }
 };
+
+export const register = async({nombre, telefono, direccion, email, contrasena})=>{
+    console.log('creando secretaria')
+    console.log(contrasena);
+    try {
+        const response = await axios ({
+            url:  `${apiUrl}/usuario/`,
+            method: 'POST',
+            headers:{
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin'
+            },
+            data:{
+                contrasena,
+                direccion,
+                email,
+                nombre,
+                telefono
+            }
+        });
+        if(response.status !== 200){
+            console.log(response)
+            throw new Error(response.data.message);
+        }
+        return response;
+    } catch (err) {
+        console.log(err);
+        return {error: err.response || err.message}
+    }
+}
+
+export const logIn = async ({email, contrasena})=>{
+    console.log(email);
+    console.log(contrasena);
+    try {
+        const response = await axios({
+            url: `${apiUrl}/usuario/autenticacion/`,
+            method: 'POST',
+            headers:{
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin'
+            },
+            data:{
+                contrasena,
+                email            
+            }
+        });
+        if(response.status !== 200){
+            console.log(response)
+            throw new Error(response.data.message);
+        }
+        return response;
+    } catch (err) {
+        console.log(err);
+        return {error: err.response || err.message}
+    }
+}

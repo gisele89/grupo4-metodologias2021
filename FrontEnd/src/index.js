@@ -9,6 +9,10 @@ import FormTransporteScreen from "./screens/FormTransporteScreen.js";
 import Footer from "./components/Footer.js";
 import CarteleraScreen from "./screens/CarteleraScreen.js";
 import RegistroScreen from "./screens/RegistroScreen.js";
+import RegisterScreen from "./screens/RegisterScreen.js";
+import RegistroExitoso from "./screens/RegistroExitoso.js";
+import LogInScreen from "./screens/LogInScreen.js";
+
 
 const routes = {
     "/matsScreen": MatsScreen,
@@ -19,6 +23,9 @@ const routes = {
     "/form-transporte": FormTransporteScreen,
     "/cartelera": CarteleraScreen,
     "/registro": RegistroScreen,
+    "/registro-secretaria": RegisterScreen,
+    "/registro-exitoso": RegistroExitoso,
+    "/iniciar-sesion": LogInScreen,
 }
 const router = async () => {
     const request = parseRequestUrl();
@@ -29,12 +36,12 @@ const router = async () => {
     const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen;
     const header = document.getElementById('header-container');
     header.innerHTML = await Header.render();
-    await Header.after_render();
+    if (header.after_render) await Header.after_render();
     const main = document.getElementById('main-container');
     main.innerHTML = await screen.render();
     if(screen.after_render) await screen.after_render();
-    const footer = document.getElementById('footer-content');
-    footer.innerHTML = await Footer.render();
+    //const footer = document.getElementById('footer-content');
+   // footer.innerHTML = await Footer.render();
 };
 
 window.addEventListener('load', router);

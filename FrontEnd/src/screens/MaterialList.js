@@ -1,7 +1,7 @@
 
 import { deleteMaterial, getMaterial, registerMaterial, updateMaterial } from '../api';
 //import {materiales} from '../data.json'
-import { rerender } from '../utils';
+import { getUser, redirigir, rerender } from '../utils';
 
 
 //const mats = materiales;
@@ -75,8 +75,6 @@ const MaterialList ={
                 });
             };
             }
-        
-       
         });
     
 
@@ -96,9 +94,9 @@ const MaterialList ={
                 document.getElementById('material-name').value = actuMat.nombre;
                 document.getElementById('material-description').value = actuMat.descripcion; 
                 document.getElementById('btn-sbm').value = updateButton.id; 
-                /* let imagene = document.getElementById('material-img').files[0].value;
+                document.getElementById('show-img').src = actuMat.img;
     
-                let src = URL.createObjectURL(imagene);
+                /*let src = URL.createObjectURL(imagene);
                 mostrarImg.src = src;
                 mostrarImg.style.display = 'block';*/
                 console.log(updateButton.id)
@@ -109,8 +107,13 @@ const MaterialList ={
     },
 
     render:async()=>{
-        
-        const datos =  await getMaterial();
+        if(getUser() === ''){
+           redirigir();
+           console.log('porque no redirgije')
+        }
+        else{
+        const datos =  await getMaterial(); 
+        const user = getUser();
         return `
             <div>
             <div class="mat-form" id="mat-form">
@@ -146,6 +149,7 @@ const MaterialList ={
             </div>
             </div>          
             </div>
+            <h4>Bienvenido ${user}</h4>
             <div class="content-mats" id="content-mats">
                 ${datos.map(dato =>
                     `
@@ -181,7 +185,7 @@ const MaterialList ={
             </div>
         `
     }
-    
+}
 }
 
 export default MaterialList;

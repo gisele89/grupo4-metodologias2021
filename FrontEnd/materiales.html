@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta
+    name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="icon" type="image/png" href="./src/media/CRUT-icon.png" />
+    <title>TPE Metodologías</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <!-- **************************** Header **************************** -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark border-bottom-green-thick">
+            <div class="container">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="home-logo" href='index.html'> <img src="./src/media/CRUT-4.png"/ height="72px"></a>
+                    </li>
+                </ul>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cartelera.html">Cartelera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active selected-menu" href="materiales.html">Materiales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="registro.html"><span>Registro</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="mi-perfil.html">Mi perfil</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>       
+    </header>
+
+    <!-- **************************** Body Main **************************** -->
+    <main class="flex-shrink-0 mb-5">
+        <div class="container mt-5">
+            <form class="col-lg-8 m-auto">
+                <div class="mb-5">
+                    <select class="form-select form-select-sm" aria-label="Franja horaria" id="filterSelect" aria-describedby="volumeHelp">
+                        <option selected disabled>Filtrar por:</option>
+                        <option value="1">Más recientes</option>
+                        <option value="2">Apellido de cartonero</option>
+                        <option value="3">Peso de materiales</option>
+                    </select>
+                </div>
+                <div class="container shadow-lg px-3 p-2 pb-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row p-4">
+                      <div class="col-sm-4 text-center align-items-center ps-0">
+                        <img src="./src/media/user.svg" class="mb-3" alt="imagen por default" width="50%">
+                        <h6 class="text-secondary">Juan Perez
+                        <span class="color-green"><strong class="fs-3">20 </strong>kg</span></h6>
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="text-center mb-3 p-2 d-flex bg-body border border-2 border-gray rounded-3">
+                            <div class="col-6 p-2">
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/dni.svg" class="mx-3" alt="d.n.i." width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">30000000</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/pin.svg" class="mx-3" alt="dirección"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">Mitre 475</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/calendario.svg" class="mx-3" alt="fecha de nacimiento"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">01/07/1980</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 p-2">
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/coche.svg" class="mx-3" alt="vehículo" width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">Fiat Qubo</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/patente.svg" class="mx-3" alt="patente"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">ABC 123</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/caja.svg" class="mx-3" alt="capacidad"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">50 kg</h6>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                          <div class="row">
+                            <div class="mb-0 pe-0 nav align-items-center justify-content-end">
+                                <button type="submit" class="btn color-green selected-menu rounded-pill mx-2">Ver detalles</button>
+                                <button type="submit" class="img-btn" id="btn-ok"> <img src="./src/media/tick.svg" class="mx-2" alt="confirmar" width="26px"></button>
+                                <button type="submit" class="img-btn" id="btn-edit"> <img src="./src/media/editar.svg" class="mx-2" alt="editar" width="26px"></button>
+                                <button type="submit" class="img-btn" id="btn-delete"> <img src="./src/media/borrar.svg" class="ml-3 mr-0" alt="borrar" width="26px"></button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="container shadow-lg px-3 pt-2 pb-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row p-4">
+                      <div class="col-sm-4 text-center align-items-center ps-0">
+                        <img src="./src/media/user.svg" class="mb-3" alt="imagen por default" width="50%">
+                        <h6 class="text-secondary">Lucrecia Lucreo
+                        <span class="color-green"><strong class="fs-3">15 </strong>kg</span></h6>
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="text-center mb-3 p-2 d-flex bg-body border border-2 border-gray rounded-3">
+                            <div class="col-6 p-2">
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/dni.svg" class="mx-3" alt="d.n.i." width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">37500000</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/pin.svg" class="mx-3" alt="dirección"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">Constitución 1058</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/calendario.svg" class="mx-3" alt="fecha de nacimiento"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">04/10/1994</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 p-2">
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/coche.svg" class="mx-3" alt="vehículo" width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">Vw Fox</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/patente.svg" class="mx-3" alt="patente"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">LUL 789</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <img src="./src/media/caja.svg" class="mx-3" alt="capacidad"  width="26px" height="26px">
+                                    <h6 class="text-secondary m-0">30 kg</h6>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                          <div class="row">
+                            <div class="mb-0 pe-0 nav align-items-center justify-content-end">
+                                <button type="submit" class="btn color-green selected-menu rounded-pill mx-2">Ver detalles</button>
+                                <button type="submit" class="img-btn" id="btn-ok"> <img src="./src/media/tick.svg" class="mx-2" alt="confirmar" width="26px"></button>
+                                <button type="submit" class="img-btn" id="btn-edit"> <img src="./src/media/editar.svg" class="mx-2" alt="editar" width="26px"></button>
+                                <button type="submit" class="img-btn" id="btn-delete"> <img src="./src/media/borrar.svg" class="ml-3 mr-0" alt="borrar" width="26px"></button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="container shadow-lg px-3 pt-2 pb-1 mb-4 bg-body rounded">
+                    <div class="d-flex justify-content-between align-items-center row p-4">
+                      <div class="col-sm-4 text-center align-items-center ps-0">
+                        <img src="./src/media/user.svg" class="mb-3" alt="imagen por default" width="50%">
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="text-center mb-3 p-2 d-flex bg-body border border-2 border-gray rounded-3">
+                            <div class="col-6 p-2">
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">Nombre</h6>
+                                    <h6 class="text-secondary m-0">Lucas</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">Apellido</h6>
+                                    <h6 class="text-secondary m-0">Gonzalez</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">DNI</h6>
+                                    <h6 class="text-secondary m-0">40000000</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">Dirección</h6>
+                                    <h6 class="text-secondary m-0">Avellaneda 421</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 p-2">
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">Fecha de Nacim.:</h6>
+                                    <h6 class="text-secondary m-0">01/01/2000</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">Vehículo</h6>
+                                    <h6 class="text-secondary m-0">Peugeot Partner</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">Patente</h6>
+                                    <h6 class="text-secondary m-0">CMV 456</h6>
+                                </div>
+                                <div class="d-flex align-items-center mb-2" height=100%>
+                                    <h6 class="color-green mx-2 my-0">Capacidad</h6>
+                                    <h6 class="text-secondary m-0">200 Kg</h6>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                          <div class="row">
+                            <div class="mb-0 pe-0 nav align-items-center justify-content-end">
+                                <button type="submit" class="btn text-white background-green rounded-pill mx-2 px-5">Subir</button>                          
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            
+            </form>
+        </div>
+    </main>
+
+    <!-- **************************** Footer **************************** -->
+    <footer class="footer background-green">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href=''> <img src="./src/media/CRUT-2.png"/ height="48px"></a>
+                    </li>
+                </ul>                
+                <ul class="navbar-nav">
+                    <li class="nav-link active">
+                        Cooperativa de Recuperadores Urbanos de Tandil
+                    </li>
+                </ul>
+            </div>
+        </nav>       
+    </footer>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

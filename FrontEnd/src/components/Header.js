@@ -1,10 +1,19 @@
+import { getUser } from "../utils";
 
 
 const Header ={
+    after_render:()=>{
+        console.log('entro aca')
+        const navegacion = document.getElementById('navbar');
+        if(getUser()!== ''){
+            navegacion.style.backgroundColor= 'navbar-dark'
+        }
+    },
+
     render: ()=>{
         return`
-        <nav class="navbar navbar-expand-lg navbar-light border-bottom-green-thick">
-    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom-green-thick" id="navbar">
+        <div class="container">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="home-logo" href='index.html'> <img src="./media/CRUT-1.png"/ height="72px"></a>
@@ -30,6 +39,9 @@ const Header ={
                 </li>
                 <li class="nav-item">
                     <a class="nav-link color-green" href="/#/postulate"><span>Postulate</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-green" href="/#/registro-secretaria"><span>Registrarse</span></a>
                 </li>
             </ul>
         </div>
