@@ -155,14 +155,6 @@ export const logIn = async ({email, contrasena})=>{
 }
 
 export const altaCartonero = async({apellido, direccion, dni, nacimiento, nombre, vehiculo}) =>{
-    /*
-    console.log(apellido)
-    console.log(direccion)
-    console.log(dni)
-    console.log(nacimiento)
-    console.log(nombre)
-    console.log(vehiculo)
-    */
     try {
         const response = await axios({
             url: `${apiUrl}/cartonero/`,
@@ -189,4 +181,47 @@ export const altaCartonero = async({apellido, direccion, dni, nacimiento, nombre
         return {error: err.response || err.message}
     }
 
+}
+
+
+export const getCartonero = async()=>{
+    try{
+        const response = await axios({
+            url: `${apiUrl}/cartonero/`,
+            method: 'GET',
+            headers:{
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin',
+            },
+        });
+        console.log(response)
+        if (response.status !== 200) {
+            
+            throw new Error(response.data.message);
+        }
+        console.log(response);
+        return response.data;
+        }catch (err) {
+            console.log(err);
+            return { error: err.response.data.message || err.message };
+        }
+}
+
+export const deleteCartonero = async(id)=>{
+    try{
+        const response = await axios({
+            url: `${apiUrl}/cartonero/${id}`,
+            method: 'DELETE',
+            headers:{
+                'Content-Type': 'application-json',
+            },
+        });
+        if (response.status !== 200) {
+            throw new Error(response.data.message);
+        }
+        return response.data;
+        
+        }catch (err) {
+        return { error: err.response.data.message || err.message };
+        }
+        
 }
