@@ -1,5 +1,7 @@
 package com.metodologias.metodologias.controller;
 
+import java.util.List;
+
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -18,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.metodologias.metodologias.controller.dto.CartoneroDTO;
 import com.metodologias.metodologias.controller.dto.MaterialDTO;
+import com.metodologias.metodologias.controller.dto.MaterialxCartoneroDTO;
 import com.metodologias.metodologias.service.CartoneroNotFound;
 import com.metodologias.metodologias.service.CartoneroService;
 import com.metodologias.metodologias.service.MaterialNotFound;
@@ -36,6 +40,19 @@ public class CartoneroController {
 	
 	@Autowired
 	CartoneroService cartoneroService;
+	
+	
+	@GetMapping("/")
+	@ApiResponses({ @ApiResponse(code = 200, message = "Ok"),
+			@ApiResponse(code = 500, message = "Internal Server Error") })
+	public @ResponseBody ResponseEntity<List<CartoneroDTO>> getCartoneros() {
+		try {
+			return new ResponseEntity<List<CartoneroDTO>>(cartoneroService.getCartoneros(), HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(INTERNAL_SERVER_ERROR, e);
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 	
 	@PostMapping("/")
 	@ApiResponses({
@@ -87,4 +104,5 @@ public class CartoneroController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
 }

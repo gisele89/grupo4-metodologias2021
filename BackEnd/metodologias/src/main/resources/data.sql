@@ -13,7 +13,13 @@ INSERT INTO material (nombre,img,descripcion) VALUES ('Frascos','data:image/svg+
         --"img": "/media/lata.svg",
       --  "nombre": "Conservas",
        -- "descripcion": "Sin restos de comida. Avisar sobre posibles bordes filosos."
- 
+ INSERT INTO cartonero (apellido,direccion,dni,nacimiento,nombre,vehiculo) VALUES ('rodriguez','francia 98','25145521','15-45-41','juan','reno 12 cabrio');
+ INSERT INTO cartonero (apellido,direccion,dni,nacimiento,nombre,vehiculo) VALUES ('palacios','italia 90','15425156','15-45-85','pedro','fiat toro');
 
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (1,120,100,1);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (2,100,80,1);
+
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (1,200,100,2);
+ INSERT INTO material_acopio (id_material,peso,peso_anterior,id_cartonero) VALUES (2,250,200,2);
  
 

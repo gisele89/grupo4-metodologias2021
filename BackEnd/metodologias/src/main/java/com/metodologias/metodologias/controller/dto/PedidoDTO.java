@@ -9,6 +9,11 @@ public class PedidoDTO {
 	private String horario;
 	private String telefono;
 	private String direccion;
+	
+	
+	
+	private String peso;
+	
 	public String getApellido() {
 		return apellido;
 	}
@@ -16,9 +21,6 @@ public class PedidoDTO {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	private Double peso;
-	
-	
 	
 	
 	public PedidoDTO() {
@@ -63,10 +65,10 @@ public class PedidoDTO {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public Double getPeso() {
+	public String getPeso() {
 		return peso;
 	}
-	public void setPeso(Double peso) {
+	public void setPeso(String peso) {
 		this.peso = peso;
 	}
 }

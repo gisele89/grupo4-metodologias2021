@@ -31,6 +31,8 @@ public class Material {
 	@Column(nullable = true)
 	private String descripcion;
 	
+	
+	
 	public String getImg() {
 		return img;
 	}

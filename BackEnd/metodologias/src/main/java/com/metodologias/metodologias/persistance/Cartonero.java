@@ -1,10 +1,15 @@
 package com.metodologias.metodologias.persistance;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name = "cartonero")
@@ -32,6 +37,22 @@ public class Cartonero {
 		
 		@Column(nullable = true)
 		private String vehiculo;
+		
+		
+		
+		
+		@OneToMany(fetch = FetchType.LAZY, mappedBy = "cartonero", cascade = CascadeType.REMOVE)
+		private List<MaterialAcopio> materiales;
+		
+		
+
+		public List<MaterialAcopio> getMateriales() {
+			return materiales;
+		}
+
+		public void setMaterial(List<MaterialAcopio> materiales) {
+			this.materiales = materiales;
+		}
 
 		public Long getIdCartonero() {
 			return idCartonero;
