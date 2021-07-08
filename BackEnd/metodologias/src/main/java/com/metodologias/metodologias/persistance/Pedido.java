@@ -40,7 +40,8 @@ public class Pedido {
 	private String direccion;
 	
 	@Column(nullable = false)
-	private Double peso;
+	private String peso;
+	
 	public void setIdPedido(Long idPedido) {
 		this.idPedido = idPedido;
 	}
@@ -85,11 +86,11 @@ public class Pedido {
 		this.direccion = direccion;
 	}
 
-	public Double getPeso() {
+	public String getPeso() {
 		return peso;
 	}
 
-	public void setPeso(Double peso) {
+	public void setPeso(String peso) {
 		this.peso = peso;
 	}
 
