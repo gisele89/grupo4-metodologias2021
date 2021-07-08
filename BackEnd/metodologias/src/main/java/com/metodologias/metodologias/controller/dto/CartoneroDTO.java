@@ -1,4 +1,9 @@
 package com.metodologias.metodologias.controller.dto;
+
+import java.util.List;
+
+import com.metodologias.metodologias.persistance.MaterialAcopio;
+
 //nombre , apellido, DNI, dirección, fecha de nacimiento, datos del vehículo
 public class CartoneroDTO {
 	private Long idCartonero;
@@ -8,7 +13,17 @@ public class CartoneroDTO {
 	private String direccion;
 	private String nacimiento;
 	private String vehiculo;
+	private List<MaterialAcopio> materiales;
 	
+	
+	public List<MaterialAcopio> getMateriales() {
+		return materiales;
+	}
+
+	public void setMateriales(List<MaterialAcopio> materiales) {
+		this.materiales = materiales;
+	}
+
 	public Long getIdCartonero() {
 		return idCartonero;
 	}
@@ -66,7 +81,7 @@ public class CartoneroDTO {
 	}
 
 	public CartoneroDTO() {
-		super();
+	
 	}
 	
 }
