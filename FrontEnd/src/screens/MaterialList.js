@@ -8,6 +8,7 @@ import { getUser, redirigir, rerender } from '../utils';
 
 const MaterialList ={ 
     after_render: async()=>{
+        if(getUser() !== ''){
         const mats =   await getMaterial();
         const contentMats = document.getElementById('content-mats')
         const formContainer = document.getElementById('mat-form');
@@ -103,16 +104,34 @@ const MaterialList ={
                 formContainer.style.visibility = 'visible';
                 contentMats.style.opacity =  '0.4';
             });
-            });        
+            }); }       
     },
 
     render:async()=>{
-        if(getUser() === ''){
-           redirigir();
-           console.log('porque no redirgije')
-        }
-        else{
         const datos =  await getMaterial(); 
+        if(getUser() === ''){
+           return`
+           <div class="content-mats" id="content-mats">
+           ${datos.map(dato =>
+               `
+               <div class="contenedor">
+                   <div class="card-container">
+                       <div class="card-material">
+                           <figure class="card-front">
+                               <img src="${dato.img}" />
+                               <h4>${dato.nombre}</h4>
+                           </figure>
+                           <figure class="card-back">
+                               <p>${dato.descripcion}</p>
+                           </figure>
+                           
+                       </div>
+                   </div>
+               </div>
+               `).join('\n')}
+           `
+        }
+        else{        
         const user = getUser();
         return `
             <div>

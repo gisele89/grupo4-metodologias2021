@@ -153,3 +153,40 @@ export const logIn = async ({email, contrasena})=>{
         return {error: err.response || err.message}
     }
 }
+
+export const altaCartonero = async({apellido, direccion, dni, nacimiento, nombre, vehiculo}) =>{
+    /*
+    console.log(apellido)
+    console.log(direccion)
+    console.log(dni)
+    console.log(nacimiento)
+    console.log(nombre)
+    console.log(vehiculo)
+    */
+    try {
+        const response = await axios({
+            url: `${apiUrl}/cartonero/`,
+            method: 'POST',
+            headers:{
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin'
+            },
+            data:{
+                apellido,
+                direccion,
+                dni,
+                nacimiento,
+                nombre,
+                vehiculo            
+            }
+        });
+        if(response.status !== 200){
+            console.log(response)
+            throw new Error(response.data.message);
+        }
+        return response;
+    } catch (err) {
+        console.log(err);
+        return {error: err.response || err.message}
+    }
+
+}
