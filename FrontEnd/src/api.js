@@ -225,3 +225,31 @@ export const deleteCartonero = async(id)=>{
         }
         
 }
+
+export const updateCartonero = async({apellido, direccion, dni, nacimiento, nombre, vehiculo, idCartonero} ) =>{
+    try{
+        const response = await axios({
+            url: `${apiUrl}/cartonero/${idCartonero}`,
+            method: 'PUT',
+            headers: {
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin',
+            },
+            data:  {    
+                apellido,
+                direccion,
+                dni,
+                nacimiento,
+                nombre,
+                vehiculo 
+            },
+        });
+        if(response.status !== 200){
+            throw new Error(response.data.message);
+        }
+        return response.data;
+    }
+    catch(err){
+        console.log(err);
+        return {error: err.response.data.message || err.message}
+    }
+}

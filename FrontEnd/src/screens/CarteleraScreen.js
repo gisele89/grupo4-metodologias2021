@@ -1,22 +1,61 @@
-import { altaCartonero, deleteCartonero, getCartonero } from '../api';
+import { altaCartonero, deleteCartonero, getCartonero, updateCartonero } from '../api';
 import {getUser} from '../utils';
 
 const CarteleraScreen ={
-    after_render:()=>{
+    after_render: async()=> {
+        const cartoneros = await getCartonero();
+
+        const inicilizar = ()=>{
+            document.getElementById('apellido').value =''
+            document.getElementById('direccion').value =''
+            document.getElementById('dni').value = ''
+            document.getElementById('fechaNac').value = ''
+            document.getElementById('nombre').value = ''
+            document.getElementById('vehiculo').value = ''
+            document.getElementById('btn-smt-c').value = ''
+        }
+        
         document.getElementById('cartonero')
         .addEventListener('submit', async(e) =>{
             e.preventDefault();
             console.log('creando cartoneitor');
             console.log(document.getElementById('dni').value)
-          
-            const data = await altaCartonero({
-                apellido: document.getElementById('apellido').value,
-                direccion: document.getElementById('direccion').value,
-                dni: document.getElementById('dni').value,
-                nacimiento: document.getElementById('fechaNac').value,
-                nombre: document.getElementById('nombre').value,
-                vehiculo: document.getElementById('vehiculo').value
+            
+            let apell = document.getElementById('apellido').value
+            let direc = document.getElementById('direccion').value
+            let dni = document.getElementById('dni').value
+            let nacimiento = document.getElementById('fechaNac').value
+            let nombre = document.getElementById('nombre').value
+            let vehiculo = document.getElementById('vehiculo').value
+            let idCart = document.getElementById('btn-smt-c').value
+
+    
+
+            if(idCart > 0){
+                console.log('actualiza')
+                const dataU = await updateCartonero({
+                    apellido: apell,
+                    direccion: direc,
+                    dni: dni,
+                    nacimiento: nacimiento,
+                    nombre: nombre,
+                    vehiculo: vehiculo,
+                    idCartonero: idCart
+                })
+                inicilizar()
+            }
+            else{
+                console.log('creando')
+                const data = await altaCartonero({
+                apellido: apell,
+                direccion: direc,
+                dni: dni,
+                nacimiento: nacimiento,
+                nombre: nombre,
+                vehiculo: vehiculo
             })
+            inicilizar()
+            }
         })
 
         const deleteCarts =  document.getElementsByClassName('delete-cartonero');
@@ -26,6 +65,26 @@ const CarteleraScreen ={
                 console.log(deleteCart.id)
                 deleteCartonero(deleteCart.id)
                 const cartoneros = await getCartonero();
+            })
+        })
+
+        const updateCarts = document.getElementsByClassName('edit-cartonero');
+        Array.from(updateCarts).forEach(updateCart =>{
+            updateCart.addEventListener('click', async() =>{
+                console.log(updateCart.id)
+                console.log('editar cartonero')
+                const actuCart = cartoneros.find((cartonero) => cartonero.idCartonero == updateCart.id)
+                console.log(actuCart)
+
+                document.getElementById('apellido').value = actuCart.apellido
+                document.getElementById('direccion').value = actuCart.direccion
+                document.getElementById('dni').value = actuCart.dni
+                document.getElementById('fechaNac').value = actuCart.nacimiento
+                document.getElementById('nombre').value = actuCart.nombre
+                document.getElementById('vehiculo').value = actuCart.vehiculo
+                document.getElementById('btn-smt-c').value = actuCart.idCartonero
+
+
             })
         })
     
@@ -347,7 +406,7 @@ const CarteleraScreen ={
                         
                     </div>
                     <div class="mb-0 nav align-items-center justify-content-end">
-                        <button type="submit" class="btn text-white background-green rounded-pill mx-2 px-5">Subir</button>
+                        <button type="submit" id="btn-smt-c"class="btn text-white background-green rounded-pill mx-2 px-5">Subir</button>
                     </div>
                     
                 </div>
