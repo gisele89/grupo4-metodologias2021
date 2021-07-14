@@ -87,224 +87,19 @@ const CarteleraScreen ={
 
             })
         })
-    
+        const verDetalles = document.getElementsByClassName('btn-detalles')
+        Array.from(verDetalles).forEach(verDetalle => {
+            verDetalle.addEventListener('click', async() =>{
+                console.log(verDetalle.id) 
+                console.log('ver detalles')
+                document.location.hash = `/registro/${verDetalle.id}`;
+            })
+        })
+        
     },
     render: async() =>{
-       const cartoneros = getCartonero();
-        if(getUser() !== ''){
-        return `
-        <div class="container mt-5">
-        <form class="col-lg-8 m-auto">
-            <div class="mb-4">
-                <select class="form-select form-select-sm" aria-label="Franja horaria" id="filterSelect" aria-describedby="volumeHelp">
-                    <option selected disabled>Filtrar por:</option>
-                    <option value="1">Más recientes</option>
-                    <option value="2">Apellido de cartonero</option>
-                    <option value="3">Peso de materiales</option>
-                </select>
-            </div>
-            
-            <div class="shadow px-3 pt-2 pb-1 mb-3 bg-body rounded">
-                <div class="d-flex justify-content-between align-items-center row">
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Fecha</h6>
-                        <h6 class="text-secondary">01/01/2021</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Nombre</h6>
-                        <h6 class="text-secondary">Juan Pérez</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Horario</h6>
-                        <h6 class="text-secondary">9 a 13hs</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Teléfono</h6>
-                        <h6 class="text-secondary">154545560</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Dirección</h6>
-                        <h6 class="text-secondary">Mitre 475</h6>
-                    </div>
-                    <div class="col-2 d-inline-flex justify-content-around">
-                        <h1 class="color-green m-0"><strong>20 </strong></h1>
-                        <img src="./src/media/pesa.svg" alt="boton de rollback">
-                    </div>
-                </div>
-            </div>
-
-            <div class="shadow px-3 pt-2 pb-1 mb-3 bg-body rounded">
-                <div class="d-flex justify-content-between align-items-center row">
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Fecha</h6>
-                        <h6 class="text-secondary">01/01/2021</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Nombre</h6>
-                        <h6 class="text-secondary">Juan Pérez</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Horario</h6>
-                        <h6 class="text-secondary">9 a 13hs</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Teléfono</h6>
-                        <h6 class="text-secondary">154545560</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Dirección</h6>
-                        <h6 class="text-secondary">Mitre 475</h6>
-                    </div>
-                    <div class="col-2 d-inline-flex justify-content-around">
-                        <h1 class="color-green m-0"><strong>20 </strong></h1>
-                        <img src="./src/media/pesa.svg" alt="boton de rollback">
-                    </div>
-                </div>
-            </div>
-            <div class="shadow px-3 pt-2 pb-1 mb-3 bg-body rounded">
-                <div class="d-flex justify-content-between align-items-center row">
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Fecha</h6>
-                        <h6 class="text-secondary">01/01/2021</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Nombre</h6>
-                        <h6 class="text-secondary">Juan Pérez</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Horario</h6>
-                        <h6 class="text-secondary">9 a 13hs</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Teléfono</h6>
-                        <h6 class="text-secondary">154545560</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Dirección</h6>
-                        <h6 class="text-secondary">Mitre 475</h6>
-                    </div>
-                    <div class="col-2 d-inline-flex justify-content-around">
-                        <h1 class="color-green m-0"><strong>20 </strong></h1>
-                        <img src="../screens/media/pesa.svg" alt="boton de rollback">
-                    </div>
-                </div>
-            </div>
-            <div class="shadow px-3 pt-2 pb-1 mb-3 bg-body rounded">
-                <div class="d-flex justify-content-between align-items-center row">
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Fecha</h6>
-                        <h6 class="text-secondary">01/01/2021</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Nombre</h6>
-                        <h6 class="text-secondary">Juan Pérez</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Horario</h6>
-                        <h6 class="text-secondary">9 a 13hs</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Teléfono</h6>
-                        <h6 class="text-secondary">154545560</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Dirección</h6>
-                        <h6 class="text-secondary">Mitre 475</h6>
-                    </div>
-                    <div class="col-2 d-inline-flex justify-content-around">
-                        <h1 class="color-green m-0"><strong>20 </strong></h1>
-                        <img src="./src/media/pesa.svg" alt="boton de rollback">
-                    </div>
-                </div>
-            </div>
-            <div class="shadow px-3 pt-2 pb-1 mb-3 bg-body rounded">
-                <div class="d-flex justify-content-between align-items-center row">
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Fecha</h6>
-                        <h6 class="text-secondary">01/01/2021</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Nombre</h6>
-                        <h6 class="text-secondary">Juan Pérez</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Horario</h6>
-                        <h6 class="text-secondary">9 a 13hs</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Teléfono</h6>
-                        <h6 class="text-secondary">154545560</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Dirección</h6>
-                        <h6 class="text-secondary">Mitre 475</h6>
-                    </div>
-                    <div class="col-2 d-inline-flex justify-content-around">
-                        <h1 class="color-green m-0"><strong>20 </strong></h1>
-                        <img src="../src/media/pesa.svg" alt="boton de rollback">
-                    </div>
-                </div>
-            </div>
-            <div class="shadow px-3 pt-2 pb-1 mb-3 bg-body rounded">
-                <div class="d-flex justify-content-between align-items-center row">
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Fecha</h6>
-                        <h6 class="text-secondary">01/01/2021</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Nombre</h6>
-                        <h6 class="text-secondary">Juan Pérez</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Horario</h6>
-                        <h6 class="text-secondary">9 a 13hs</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Teléfono</h6>
-                        <h6 class="text-secondary">154545560</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Dirección</h6>
-                        <h6 class="text-secondary">Mitre 475</h6>
-                    </div>
-                    <div class="col-2 d-inline-flex justify-content-around">
-                        <h1 class="color-green m-0"><strong>20 </strong></h1>
-                        <img src="./src/media/pesa.svg" alt="boton de rollback">
-                    </div>
-                </div>
-            </div>
-            <div class="shadow px-3 pt-2 pb-1 mb-3 bg-body rounded">
-                <div class="d-flex justify-content-between align-items-center row">
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Fecha</h6>
-                        <h6 class="text-secondary">01/01/2021</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Nombre</h6>
-                        <h6 class="text-secondary">Juan Pérez</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Horario</h6>
-                        <h6 class="text-secondary">9 a 13hs</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Teléfono</h6>
-                        <h6 class="text-secondary">154545560</h6>
-                    </div>
-                    <div class="text-center col-2">
-                        <h6 class="color-green">Dirección</h6>
-                        <h6 class="text-secondary">Mitre 475</h6>
-                    </div>
-                    <div class="col-2 d-inline-flex justify-content-around">
-                        <h1 class="color-green m-0"><strong>20 </strong></h1>
-                        <img src="./src/media/pesa.svg" alt="boton de rollback">
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-        `
-    }else{
+     
+        
         const cartoneros = await getCartonero();
         return `
         <div class="container mt-5">
@@ -358,7 +153,7 @@ const CarteleraScreen ={
                         </div>
                     </div>
                     <div class="mb-0 nav align-items-center justify-content-end">
-                        <button type="submit" class="btn color-green selected-menu rounded-pill mx-2">Ver Detalles</button>
+                        <button  id="${cartonero.idCartonero}" class="btn color-green selected-menu rounded-pill mx-2 btn-detalles"> Ver Detalles</button>
                         
                         <button type="submit" class="img-btn edit-cartonero" id="${cartonero.idCartonero}"> <img src="./src/media/editar.svg" class="mx-2" alt="editar" width="26px"></button>
                         <button type="submit" class="img-btn delete-cartonero" id="${cartonero.idCartonero}"> <img src="./src/media/borrar.svg" class="ml-3 mr-0" alt="borrar" width="26px"></button>
@@ -399,9 +194,6 @@ const CarteleraScreen ={
                                 <div class="d-flex align-items-center mb-2" height=100%>
                                     <input type="text" id="vehiculo" name="vehiculo" placeholder="Vehiculo"/>
                                 </div>
-                                <div class="d-flex align-items-center mb-2" height=100%>
-                                    <input type="text" id="patente" name="patente" placeholder="Patente"/>
-                                </div>
                             </div>
                         
                     </div>
@@ -416,7 +208,7 @@ const CarteleraScreen ={
         </div>
     </div>
         `
-    }}
+    }
     
 }
 

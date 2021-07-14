@@ -25,9 +25,7 @@ const Header ={
         </button>
         <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link color-green selected-menu" href="index.html">Home</a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link color-green" href="/#/cartelera">Cartelera</a>
                 </li>
@@ -38,10 +36,7 @@ const Header ={
                     <a class="nav-link color-green" href="/#/registro">Registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link color-green" href="/#/postulate"><span>Postulate</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-green" href="/#/registro-secretaria"><span>Registrarse</span></a>
+                    <a class="nav-link color-green" href="/#/registro-secretaria"><span>Admin</span></a>
                 </li>
             </ul>
         </div>

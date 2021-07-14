@@ -22,7 +22,7 @@ const routes = {
     "/form-materiales": FormMaterialesScreen, 
     "/form-transporte": FormTransporteScreen,
     "/cartelera": CarteleraScreen,
-    "/registro": RegistroScreen,
+    "/registro/:id": RegistroScreen,
     "/registro-secretaria": RegisterScreen,
     "/registro-exitoso": RegistroExitoso,
     "/iniciar-sesion": LogInScreen,

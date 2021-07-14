@@ -253,3 +253,26 @@ export const updateCartonero = async({apellido, direccion, dni, nacimiento, nomb
         return {error: err.response.data.message || err.message}
     }
 }
+
+export const getRegistrosMat = async (id) =>{
+   
+    try{
+        const response = await axios({
+            url: `${apiUrl}/registro-material-acopio/cartonero/${id}`,
+            method: 'GET',
+            headers:{
+                'Access-Control-Allow-Origin': 'Access-Control-Allow-Origin',
+            },
+        });
+        console.log(response)
+        if (response.status !== 200) {
+            
+            throw new Error(response.data.message);
+        }
+        console.log(response);
+        return response.data;
+        }catch (err) {
+            console.log(err);
+            return { error: err.response.data.message || err.message };
+        }
+}
